@@ -1,13 +1,15 @@
 import { Node } from 'tweed'
 
 export default class StartPage {
-  constructor (hero) {
-    this._hero = hero
+  constructor (...children) {
+    this._children = children
   }
 
   render () {
     return (
-      <div>{this._hero}</div>
+      <div>
+        {this._children.map((c) => c.render())}
+      </div>
     )
   }
 }

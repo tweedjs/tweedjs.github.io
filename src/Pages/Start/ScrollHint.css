@@ -1,0 +1,21 @@
+.hint {
+  position: fixed;
+  bottom: 1em;
+  left: 0;
+  width: 100%;
+  text-align: center;
+  transition-property: opacity, transform;
+  transition-duration: 300ms;
+}
+
+.hintShown {
+  composes: hint;
+  opacity: 1;
+  transform: translateY(0em);
+}
+
+.hintHidden {
+  composes: hint;
+  opacity: 0;
+  transform: translateY(2em);
+}

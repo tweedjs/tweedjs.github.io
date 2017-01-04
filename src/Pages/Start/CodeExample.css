@@ -1,0 +1,70 @@
+.example {
+  display: flex;
+  width: 100%;
+  margin: 0;
+}
+
+.codeWrapper, .componentWrapper {
+  flex: 1 1 50%;
+  display: flex;
+  padding: 5em 2em;
+}
+
+.component, .code {
+  width: 100%;
+  max-width: 40em;
+}
+
+.componentWrapper {
+  justify-content: flex-start;
+}
+
+.codeWrapper {
+  justify-content: flex-end;
+  background: #FAFAFB;
+}
+
+.code {
+  margin: 0;
+  overflow-x: auto;
+}
+
+.code, .code code {
+  font: inherit;
+  font-family: 'SF Mono', monospace;
+  font-size: 1em;
+  line-height: 1.6;
+}
+
+.code :global(.token.keyword) {
+  color: #2277FF;
+}
+
+.code :global(.token.class-name) {
+  color: #FF6A7C;
+}
+
+.code :global(.token.comment) {
+  color: #B9B9B9;
+}
+
+.code :global(.token.punctuation) {
+  color: #B9B9B9;
+}
+
+.code :global(.token.operator) {
+  color: #9C9C9C;
+}
+
+.code :global(.token.number) {
+  color: #CA5A86;
+}
+
+.code :global(.token.string) {
+  color: #43AF52;
+}
+
+input, button {
+  font: inherit;
+  padding: 0.4em 0.5em;
+}
