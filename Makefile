@@ -9,7 +9,8 @@ webpack:
 
 .PHONY: copy
 copy:
-	cp src/index.html dist
+	cp src/index.html dist && \
+	cp src/Pages/Start/tweed-logo.svg dist
 
 .PHONY: commit
 commit: build

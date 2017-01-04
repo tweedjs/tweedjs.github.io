@@ -1,0 +1,12 @@
+html, body {
+  margin: 0;
+  height: 100%;
+  width: 100%;
+}
+
+.main {
+  width: 100%;
+  min-height: 100%;
+
+  composes: body from './Typography.css'
+}
