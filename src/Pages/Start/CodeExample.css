@@ -12,16 +12,27 @@
 
 .component, .code {
   width: 100%;
-  max-width: 40em;
+  max-width: 40rem;
 }
 
 .componentWrapper {
   justify-content: flex-start;
 }
 
+.componentWithTitle {
+  composes: component;
+  padding-top: 5em;
+}
+
 .codeWrapper {
   justify-content: flex-end;
+  flex-wrap: wrap;
   background: #FAFAFB;
+}
+
+.title {
+  flex: 0 0 40rem;
+  max-width: 100%;
 }
 
 .code {

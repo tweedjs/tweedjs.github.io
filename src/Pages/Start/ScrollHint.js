@@ -1,25 +1,13 @@
-import { mutating, Node } from 'tweed'
+import { Node } from 'tweed'
 import style from './ScrollHint.css'
 
-const LIMIT = 100
-
 export default class ScrollHint {
-  @mutating _shown = true
-
-  constructor () {
-    window.addEventListener('scroll', this._onScroll.bind(this))
-  }
-
-  _onScroll () {
-    if (this._shown && window.scrollY > LIMIT) {
-      this._shown = false
-    } else if (!this._shown && window.scrollY <= LIMIT) {
-      this._shown = true
-    }
+  constructor (scroll) {
+    this._scroll = scroll
   }
 
   render () {
-    const className = this._shown
+    const className = this._scroll.isAtTop
       ? style.hintShown
       : style.hintHidden
 

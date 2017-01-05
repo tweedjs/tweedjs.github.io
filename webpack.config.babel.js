@@ -12,7 +12,7 @@ export default {
     loaders: [{
       loader: 'babel',
       test: /\.js$/,
-      exclude: /node_modules/
+      exclude: /node_modules|Code\/tweed(\/.*)?$/
     }, {
       test: /\.css$/,
       loader: ExtractTextPlugin.extract('css-loader?modules=true&localIdentName=[hash:base64:5]')

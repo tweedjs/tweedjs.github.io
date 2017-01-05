@@ -1,0 +1,46 @@
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: rgba(255,255,255,0.97);
+  transition: 700ms box-shadow;
+}
+
+@supports(backdrop-filter: blur(7px)) {
+  .header {
+    background: rgba(255,255,255,0.7);
+    backdrop-filter: blur(7px);
+  }
+}
+
+@supports(-webkit-backdrop-filter: blur(7px)) {
+  .header {
+    background: rgba(255,255,255,0.7);
+    -webkit-backdrop-filter: blur(7px);
+  }
+}
+
+.stickyHeader {
+  composes: header;
+  box-shadow: 0 0.3em 0.5em rgba(0,0,0,0.05)
+}
+
+.menu {
+  list-style: none;
+  margin: 0;
+  display: flex;
+  padding: 0 0.9em;
+}
+
+.menuItem {
+  display: inline-block;
+  padding: 0.8em 0.9em;
+  text-decoration: none;
+  line-height: 1;
+  text-transform: uppercase;
+  font-weight: bold;
+  letter-spacing: 0.02em;
+  font-size: 0.9em;
+  color: #000000;
+}
