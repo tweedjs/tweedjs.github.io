@@ -119,7 +119,7 @@ export default class Examples {
         '          <button',
         '            on-click={() => this.select(tab)}',
         '            style-textDecoration={',
-        '              this._selected.title === tab.title',
+        '              this._selected === tab',
         "                ? 'underline'",
         "                : 'none'",
         '            }',
@@ -176,7 +176,7 @@ export default class Examples {
                 <button
                   on-click={() => this.select(tab)}
                   style-textDecoration={
-                    this._selected.title === tab.title
+                    this._selected === tab
                       ? 'underline'
                       : 'none'
                   }
