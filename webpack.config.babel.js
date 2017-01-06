@@ -21,5 +21,6 @@ export default {
   plugins: [
     new ExtractTextPlugin('style.css'),
     new optimize.UglifyJsPlugin()
-  ]
+  ],
+  devServer: { inline: true }
 }

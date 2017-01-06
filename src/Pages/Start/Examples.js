@@ -271,6 +271,61 @@ export default class Examples {
           )
         }
       }()
+    },
+
+    {
+      title: 'Your App, Your Architecture',
+      code: [
+        'const router = new Router(new PageFactory())',
+        '',
+        'router.navigate(window.location.pathname)',
+        '',
+        'export default new App(',
+        '  new Header(',
+        '    new Menu(',
+        "      new Link(router, 'Home', '/'),",
+        "      new Link(router, 'About Me', '/about')",
+        '    )',
+        '  ),',
+        '  router',
+        ')'
+      ].join('\n'),
+
+      component: {
+        _diLink () {
+          return (
+            <a
+              href='https://en.wikipedia.org/wiki/Dependency_injection'
+              target='_blank'
+            >
+              Dependency Injection
+            </a>
+          )
+        },
+
+        _ssrLink () {
+          return (
+            <a
+              href='https://google.com/search?q=server+side+rendered+javascript'
+              target='_blank'
+            >
+              SSR
+            </a>
+          )
+        },
+
+        render () {
+          return (
+            <article>
+              <p>
+                Using the power of {this._diLink()} we get a clear, decoupled overview of
+                our application. And by injecting different implementations for server-side
+                and client-side code, {this._ssrLink()} is no longer such a headache.
+              </p>
+            </article>
+          )
+        }
+      }
     }
   ]
 }

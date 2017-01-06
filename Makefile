@@ -3,6 +3,9 @@ DATE=$(shell date +"%Y-%m-%d %H:%M:%S")
 .PHONY: build
 build: webpack copy
 
+.PHONY: dev
+dev: webpack-dev-server
+
 .PHONY: webpack
 webpack:
 	webpack
@@ -20,3 +23,10 @@ commit: build
 .PHONY: push
 push: commit
 	git subtree push --prefix dist origin master
+
+.PHONY: webpack-dev-server
+webpack-dev-server:
+	webpack-dev-server \
+		--content-base dist/ \
+		--inline \
+		--hot
