@@ -106,6 +106,10 @@
   }
 }
 
+.code :global(.token.script) {
+  color: #000;
+}
+
 .code :global(.token.keyword) {
   color: #2277FF;
 }
