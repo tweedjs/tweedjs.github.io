@@ -10681,7 +10681,7 @@
 	    key: 'render',
 	    value: function render() {
 	      return (0, _tweed.Node)(
-	        'h1',
+	        'span',
 	        null,
 	        'Hello World'
 	      );
@@ -10697,19 +10697,19 @@
 /* 337 */
 /***/ function(module, exports) {
 
-	module.exports = "import { Node } from 'tweed'\n\nexport default class Hello {\n  render () {\n    return <h1>Hello World</h1>\n  }\n}\n"
+	module.exports = "import { Node } from 'tweed'\n\nexport default class Hello {\n  render () {\n    return <span>Hello World</span>\n  }\n}\n"
 
 /***/ },
 /* 338 */
 /***/ function(module, exports) {
 
-	module.exports = "import { Node } from 'tweed'\n\nexport default class Hello {\n  public render (): Node {\n    return <h1>Hello World</h1>\n  }\n}\n"
+	module.exports = "import { Node } from 'tweed'\n\nexport default class Hello {\n  public render (): Node {\n    return <span>Hello World</span>\n  }\n}\n"
 
 /***/ },
 /* 339 */
 /***/ function(module, exports) {
 
-	module.exports = "var n = require('tweed').Node\n\nfunction Hello () {}\n\nHello.prototype.render = function () {\n  return n('h1', null, 'Hello World')\n}\n\nmodule.exports = Hello\n"
+	module.exports = "var n = require('tweed').Node\n\nfunction Hello () {}\n\nHello.prototype.render = function () {\n  return n('span', null, 'Hello World')\n}\n\nmodule.exports = Hello\n"
 
 /***/ },
 /* 340 */

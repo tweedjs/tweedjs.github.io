@@ -231,6 +231,10 @@ html, body {
   }
 }
 
+._22Ooo .token.script {
+  color: #000;
+}
+
 ._22Ooo .token.keyword {
   color: #2277FF;
 }
