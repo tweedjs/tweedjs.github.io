@@ -2506,6 +2506,10 @@ range-parser@^1.0.3, range-parser@~1.2.0:
   version "1.2.0"
   resolved "https://registry.yarnpkg.com/range-parser/-/range-parser-1.2.0.tgz#f49be6b487894ddc40dcc94a322f611092e00d5e"
 
+raw-loader@^0.5.1:
+  version "0.5.1"
+  resolved "https://registry.yarnpkg.com/raw-loader/-/raw-loader-0.5.1.tgz#0c3d0beaed8a01c966d9787bf778281252a979aa"
+
 rc@~1.1.6:
   version "1.1.6"
   resolved "https://registry.yarnpkg.com/rc/-/rc-1.1.6.tgz#43651b76b6ae53b5c802f1151fa3fc3b059969c9"
@@ -2988,9 +2992,15 @@ tweed-babel-config@^0.2.0:
     babel-preset-es2016 "^6.16.0"
     babel-preset-es2017 "^6.16.0"
 
-tweed@^0.2.1:
+tweed-router@^0.2.1:
   version "0.2.1"
-  resolved "https://registry.yarnpkg.com/tweed/-/tweed-0.2.1.tgz#e0b5869255b471bdfcfab9df7fcfe7f46df7485f"
+  resolved "https://registry.yarnpkg.com/tweed-router/-/tweed-router-0.2.1.tgz#6e00997f4ec51f611c103d297e58315f4b14e8df"
+  dependencies:
+    tweed "^0.2.1"
+
+tweed@^0.2.1, tweed@^0.2.2:
+  version "0.2.2"
+  resolved "https://registry.yarnpkg.com/tweed/-/tweed-0.2.2.tgz#0edeac0f55633a4e52c89794ed13165174040ca0"
   dependencies:
     snabbdom "^0.5.4"
     snabbdom-jsx "^0.3.1"

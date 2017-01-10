@@ -1,0 +1,147 @@
+.resultPage {
+  background-color: #F3F3F3;
+  border: 1px solid rgba(0,0,0,0.05);
+  box-sizing: border-box;
+  padding: 0.5rem 0.7rem;
+}
+
+.wrapper {
+  margin-top: -1px;
+}
+
+@media (min-width: 800px) {
+  .wrapper {
+    display: flex;
+  }
+
+  .half {
+    flex: 0 0 60%;
+    max-width: 60%;
+  }
+
+  .resultHalf {
+    flex: 0 0 40%;
+    max-width: 40%;
+    composes: resultPage;
+    border-left: 0;
+  }
+}
+
+@media (max-width: 799px) {
+  .resultHalf {
+    display: none;
+  }
+}
+
+.tabs {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  align-items: flex-end;
+  position: relative;
+}
+
+.tab {
+  composes: menuItem from '../../Header/Header.css';
+  background-color: #FAFAFA;
+  border: 1px solid rgba(0,0,0,0.05);
+  border-top-left-radius: 4px;
+  border-top-right-radius: 4px;
+  margin: 0;
+  margin-right: 0.1em;
+  font-size: 0.8em;
+}
+
+.tab:focus {
+  outline: 0;
+  border-top: 1px solid #000;
+}
+
+.selectedTab {
+  composes: tab;
+  border-bottom-color: transparent;
+  border-top: 2px solid #000 !important;
+  background-color: #F3F3F3;
+  z-index: 100;
+}
+
+.resultTab {
+  composes: tab;
+}
+
+.selectedResultTab {
+  composes: selectedTab;
+}
+
+@media (min-width: 800px) {
+  .resultTab, .selectedResultTab {
+    display: none;
+  }
+}
+
+.code {
+  padding: 0.5rem 0.7rem;
+  display: inline-block;
+}
+
+.codeWrapper {
+  margin: 0;
+  background-color: #F3F3F3;
+  border: 1px solid rgba(0,0,0,0.05);
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+.code {
+  font: inherit;
+  font-family: 'SF Mono', 'Roboto Mono', Menlo, Monaco, monospace;
+  font-size: 1em;
+  line-height: 1.6;
+}
+
+@media (max-width: 800px) {
+  .code {
+    font-size: 0.85em;
+  }
+}
+
+.code :global(.token.keyword) {
+  color: #2277FF;
+}
+
+.code :global(.token.annotation) {
+  color: #2277FF;
+}
+
+.code :global(.token.tag) {
+  color: #2277FF;
+}
+
+.code :global(.token.attr-name) {
+  color: #D0C03B;
+}
+
+.code :global(.token.class-name) {
+  color: #FF6A7C;
+}
+
+.code :global(.token.comment) {
+  color: #B9B9B9;
+}
+
+.code :global(.token.punctuation) {
+  color: #B9B9B9;
+}
+
+.code :global(.token.operator) {
+  color: #9C9C9C;
+}
+
+.code :global(.token.number) {
+  color: #CA5A86;
+}
+
+.code :global(.token.string) {
+  color: #43AF52;
+}

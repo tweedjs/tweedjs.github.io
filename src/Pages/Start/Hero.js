@@ -7,7 +7,7 @@ export default class Hero {
       <div className={style.wrapper}>
         <h1 className={style.heading}>
           <img
-            src='./tweed-logo.svg'
+            src='/tweed-logo.svg'
             alt='Tweed'
             className={style.logo}
           />

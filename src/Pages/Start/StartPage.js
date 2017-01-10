@@ -1,8 +1,24 @@
+/** @jsx Node */
+
 import { Node } from 'tweed'
+import Hero from './Hero'
+// import ScrollHint from './ScrollHint'
+// import Examples from './Examples'
+// import CodeExample from './CodeExample'
 
 export default class StartPage {
   constructor (...children) {
     this._children = children
+  }
+
+  static make (scroll) {
+    return new StartPage(
+      new Hero(),
+      // new ScrollHint(scroll),
+      // new Examples(
+      //   new CodeExample()
+      // )
+    )
   }
 
   render () {

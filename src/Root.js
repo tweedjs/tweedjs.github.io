@@ -5,42 +5,42 @@ import style from './Root.css'
 import Header from './Header/Header'
 import LinkMenuItem from './Header/LinkMenuItem'
 import StartPage from './Pages/Start/StartPage'
-import Hero from './Pages/Start/Hero'
-import ScrollHint from './Pages/Start/ScrollHint'
-import Examples from './Pages/Start/Examples'
-import CodeExample from './Pages/Start/CodeExample'
+import DocsPage from './Pages/Docs/DocsPage'
 import Scroll from './Window/Scroll'
+
+import BrowserRouter from 'tweed-router/browser'
 
 export default class Root {
   static async make () {
     const scroll = new Scroll()
 
+    const router = await BrowserRouter.make({
+      '/': () => StartPage.make(scroll),
+      '/docs/': DocsPage.make
+    })
+
     return new Root(
       new Header(
         scroll,
-        new LinkMenuItem('Examples', '#examples'),
+        router,
+        new LinkMenuItem('Home', '/'),
+        new LinkMenuItem('Docs', '/docs/'),
         new LinkMenuItem('GitHub', 'https://github.com/tweedjs/tweed', { target: '_blank' })
       ),
-      new StartPage(
-        new Hero(),
-        new ScrollHint(scroll),
-        new Examples(
-          new CodeExample()
-        )
-      )
+      router
     )
   }
 
-  constructor (header, page) {
+  constructor (header, router) {
     this._header = header
-    this._page = page
+    this._router = router
   }
 
   render () {
     return (
       <div className={style.main}>
         {this._header}
-        {this._page}
+        {this._router}
       </div>
     )
   }

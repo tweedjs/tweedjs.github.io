@@ -1,9 +1,12 @@
+/** @jsx Node */
+
 import { Node } from 'tweed'
 import style from './Header.css'
 
 export default class Header {
-  constructor (scroll, ...items) {
+  constructor (scroll, router, ...items) {
     this._scroll = scroll
+    this._router = router
     this._items = items
   }
 
@@ -18,11 +21,12 @@ export default class Header {
           <ul className={style.menu}>
             {this._items.map(({ href, title, props }) => (
               <li>
-                <a
-                  className={style.menuItem}
-                  href={href}
-                  {...props}
-                >{title}</a>
+                {this._router.link(
+                  href, title, Object.assign({},
+                    props,
+                    { className: style.menuItem }
+                  )
+                )}
               </li>
             ))}
           </ul>

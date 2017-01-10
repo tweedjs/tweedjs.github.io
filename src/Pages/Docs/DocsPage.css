@@ -1,0 +1,52 @@
+.choke {
+  margin: 0 auto;
+  padding: 1rem;
+  max-width: 900px;
+}
+
+.header {
+  padding-top: calc(1.5rem + 10vw);
+  padding-bottom: 2vw;
+  color: #FFF;
+  background: #1F1F1F;
+}
+
+.headerTitle {
+  composes: choke;
+  font-size: 7vw;
+  font-weight: 300;
+}
+
+@media (min-width: 500px) {
+  .headerTitle {
+    font-size: 5vw;
+  }
+}
+
+@media (min-width: 900px) {
+  .headerTitle {
+    font-size: 3vw;
+  }
+}
+
+.article article {
+  margin: 0 auto;
+  padding: 1rem;
+  max-width: 900px;
+}
+
+.article p {
+  line-height: 1.6;
+  max-width: 37em;
+}
+
+.article article > p, .article article > div {
+  margin: 1.4em 0;
+}
+
+.article p code {
+  font-family: 'SF Mono', 'Roboto Mono', Menlo, Monaco, monospace;
+  background-color: #F3F3F3;
+  padding: 0.1em 0.3em;
+  border-radius: 2px;
+}

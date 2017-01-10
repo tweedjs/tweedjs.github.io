@@ -5,6 +5,7 @@
   width: 100%;
   background: rgba(255,255,255,0.97);
   transition: 700ms box-shadow;
+  z-index: 200;
 }
 
 @supports(backdrop-filter: blur(7px)) {

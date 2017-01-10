@@ -13,6 +13,8 @@ webpack:
 .PHONY: copy
 copy:
 	cp src/index.html dist && \
+	mkdir -p dist/docs && \
+	cp src/index.html dist/docs && \
 	cp src/Pages/Start/tweed-logo.svg dist
 
 .PHONY: commit
