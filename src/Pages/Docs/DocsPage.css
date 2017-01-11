@@ -50,3 +50,15 @@
   padding: 0.1em 0.3em;
   border-radius: 2px;
 }
+
+.article article > pre > code {
+  background-color: #F3F3F3;
+  padding: 0.5rem 0.7rem;
+  display: block;
+  border-radius: 2px;
+
+  font: inherit;
+  font-family: 'SF Mono', 'Roboto Mono', Menlo, Monaco, monospace;
+  font-size: 1em;
+  line-height: 1.6;
+}

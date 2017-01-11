@@ -20,7 +20,9 @@ export default {
   },
   plugins: [
     new ExtractTextPlugin('style.css'),
-    // new optimize.UglifyJsPlugin()
+    ...(process.env.NODE_ENV === 'production'
+      ? [new optimize.UglifyJsPlugin()]
+      : [])
   ],
   devServer: { inline: true }
 }

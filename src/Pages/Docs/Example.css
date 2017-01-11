@@ -1,12 +1,15 @@
 .resultPage {
   background-color: #F3F3F3;
-  border: 1px solid rgba(0,0,0,0.05);
+  border-top: 1px solid rgba(0,0,0,0.05);
   box-sizing: border-box;
   padding: 0.5rem 0.7rem;
 }
 
 .wrapper {
   margin-top: -1px;
+  border-radius: 2px;
+  border-top-left-radius: 0;
+  overflow: hidden;
 }
 
 @media (min-width: 800px) {
@@ -80,20 +83,18 @@
   }
 }
 
-.code {
-  padding: 0.5rem 0.7rem;
-  display: inline-block;
-}
-
 .codeWrapper {
   margin: 0;
   background-color: #F3F3F3;
-  border: 1px solid rgba(0,0,0,0.05);
+  border-top: 1px solid rgba(0,0,0,0.05);
+  border-left: 1px solid rgba(0,0,0,0.05);
   overflow-x: auto;
   -webkit-overflow-scrolling: touch;
 }
 
 .code {
+  padding: 0.5rem 0.7rem;
+  display: inline-block;
   font: inherit;
   font-family: 'SF Mono', 'Roboto Mono', Menlo, Monaco, monospace;
   font-size: 1em;
@@ -126,8 +127,16 @@
   color: #D0C03B;
 }
 
+.code :global(.token.attr-value) {
+  color: #43AF52;
+}
+
 .code :global(.token.class-name) {
   color: #FF6A7C;
+}
+
+.code :global(.token.doctype) {
+  color: #B9B9B9;
 }
 
 .code :global(.token.comment) {
@@ -139,6 +148,10 @@
 }
 
 .code :global(.token.operator) {
+  color: #9C9C9C;
+}
+
+.code :global(.token.prompt) {
   color: #9C9C9C;
 }
 

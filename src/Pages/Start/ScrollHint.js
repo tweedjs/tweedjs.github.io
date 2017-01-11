@@ -1,3 +1,5 @@
+/** @jsx Node */
+
 import { Node } from 'tweed'
 import style from './ScrollHint.css'
 

@@ -1,3 +1,5 @@
+/** @jsx Node */
+
 import { Node } from 'tweed'
 import Example from './Example'
 
@@ -18,7 +20,7 @@ export default class Documentation {
         </p>
         <p>
           At its core, it's all about classes. A simple <code>render</code> method
-          is all that's needed output some markup.
+          is all that's needed to output some markup.
         </p>
 
         {this._hello}
@@ -26,10 +28,45 @@ export default class Documentation {
         <p>
           Tweed components can hold mutable state. As long as the properties that
           are mutable are annotated with <code>@mutating</code>, the component
-          will automatically update when the property is updated.
+          will automatically rerender when the property is updated.
         </p>
 
         {this._counter}
+
+        <h2>Getting Started</h2>
+
+        <p>
+          Trying something new should not be a hassle. Your time is precious!
+          That's why there's a project
+          called <a href='https://github.com/tweedjs/tweed-peek'>Tweed Peek</a> which
+          makes it easy to try out Tweed with nothing more than a text editor.
+        </p>
+
+        {Example.html(`
+<!DOCTYPE html>
+<html>
+  <head>
+    <script src='https://tweedjs.github.io/peek.js'></script>
+  </head>
+  <body>
+    <div id='app'></div>
+
+    <script type='application/javascript+tweed'>
+      import { Engine, Node } from 'tweed'
+      import DOMRenderer from 'tweed/render/dom'
+
+      class Hello {
+        render () {
+          return <h1>Hello World</h1>
+        }
+      }
+
+      new Engine(new DOMRenderer(app))
+        .render(new Hello())
+    </script>
+  </body>
+</html>
+        `.trim())}
       </article>
     )
   }

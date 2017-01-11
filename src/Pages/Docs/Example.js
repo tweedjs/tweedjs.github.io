@@ -1,9 +1,10 @@
+/** @jsx Node */
+
 import { mutating, Node } from 'tweed'
 
 import { highlight, languages } from 'prismjs/components/prism-core'
 import 'prismjs/components/prism-clike'
 import 'prismjs/components/prism-javascript'
-// import 'prismjs/components/prism-typescript'
 import 'prismjs/components/prism-markup'
 import 'prismjs/components/prism-jsx'
 import './PrismTweed'
@@ -52,7 +53,7 @@ export default class Example {
           <li>
             <button
               className={this._selectedIndex === index ? style.selectedTab : style.tab}
-              on-click={() => this._selectedIndex = index}
+              on-click={() => { this._selectedIndex = index }}
             >
               {label}
             </button>
@@ -61,7 +62,7 @@ export default class Example {
         <li>
           <button
             className={this._selectedIndex === -1 ? style.selectedResultTab : style.resultTab}
-            on-click={() => this._selectedIndex = -1}
+            on-click={() => { this._selectedIndex = -1 }}
           >
             Result
           </button>
@@ -83,6 +84,35 @@ export default class Example {
           </div>
         </div>
       </div>
+    )
+  }
+
+  static shell (code) {
+    return (
+      <pre>
+        <code
+          className={style.code}
+          innerHTML={
+            code
+              .replace(/</g, '&lt;')
+              .replace(/>/g, '&gt;')
+              .replace(/(^|\n)\$/g, (m) =>
+                `<span class='token prompt'>${m}</span>`
+              )
+          }
+        />
+      </pre>
+    )
+  }
+
+  static html (code) {
+    return (
+      <pre>
+        <code
+          className={style.code}
+          innerHTML={highlight(code, languages.tweed)}
+        />
+      </pre>
     )
   }
 }
