@@ -86,10 +86,14 @@
 .codeWrapper {
   margin: 0;
   background-color: #F3F3F3;
-  border-top: 1px solid rgba(0,0,0,0.05);
-  border-left: 1px solid rgba(0,0,0,0.05);
   overflow-x: auto;
   -webkit-overflow-scrolling: touch;
+}
+
+.codeWrapperInBox {
+  composes: codeWrapper;
+  border-top: 1px solid rgba(0,0,0,0.05);
+  border-left: 1px solid rgba(0,0,0,0.05);
 }
 
 .code {

@@ -33,7 +33,7 @@ export default class Example {
     for (let i = 0; i < keys.length; i++) {
       if (i === this._selectedIndex) {
         return (
-          <pre className={style.codeWrapper}>
+          <pre className={style.codeWrapperInBox}>
             <code
               className={style.code}
               innerHTML={highlight(this._source[keys[i]], languages.tweed)}
@@ -89,7 +89,7 @@ export default class Example {
 
   static shell (code) {
     return (
-      <pre>
+      <pre className={style.codeWrapper}>
         <code
           className={style.code}
           innerHTML={
@@ -107,7 +107,7 @@ export default class Example {
 
   static html (code) {
     return (
-      <pre>
+      <pre className={style.codeWrapper}>
         <code
           className={style.code}
           innerHTML={highlight(code, languages.tweed)}

@@ -651,7 +651,7 @@ babel-polyfill@^6.16.0, babel-polyfill@^6.20.0:
     core-js "^2.4.0"
     regenerator-runtime "^0.10.0"
 
-babel-preset-es2015@^6.18.0:
+babel-preset-es2015@^6.16.0:
   version "6.18.0"
   resolved "https://registry.yarnpkg.com/babel-preset-es2015/-/babel-preset-es2015-6.18.0.tgz#b8c70df84ec948c43dcf2bf770e988eb7da88312"
   dependencies:
@@ -692,6 +692,14 @@ babel-preset-es2017@^6.16.0:
   dependencies:
     babel-plugin-syntax-trailing-function-commas "^6.8.0"
     babel-plugin-transform-async-to-generator "^6.16.0"
+
+babel-preset-latest@^6.16.0:
+  version "6.16.0"
+  resolved "https://registry.yarnpkg.com/babel-preset-latest/-/babel-preset-latest-6.16.0.tgz#5b87e19e250bb1213f13af4ec9dc7a51d53f388d"
+  dependencies:
+    babel-preset-es2015 "^6.16.0"
+    babel-preset-es2016 "^6.16.0"
+    babel-preset-es2017 "^6.16.0"
 
 babel-register@^6.18.0:
   version "6.18.0"
@@ -3565,42 +3573,40 @@ tunnel-agent@~0.4.1:
   version "0.4.3"
   resolved "https://registry.yarnpkg.com/tunnel-agent/-/tunnel-agent-0.4.3.tgz#6373db76909fe570e08d73583365ed828a74eeeb"
 
-tweed-babel-config@^0.2.0:
-  version "0.2.0"
-  resolved "https://registry.yarnpkg.com/tweed-babel-config/-/tweed-babel-config-0.2.0.tgz#bf9b10d13cad46a9eabdbe90b1b0ddbc5df15ade"
+tweed-babel-config@^0.3.0:
+  version "0.3.0"
+  resolved "https://registry.yarnpkg.com/tweed-babel-config/-/tweed-babel-config-0.3.0.tgz#62915b870affb6a07cd77865dd7dc1243fdf9711"
   dependencies:
     babel-plugin-transform-class-properties "^6.19.0"
     babel-plugin-transform-decorators-legacy "^1.3.4"
     babel-plugin-transform-export-extensions "^6.8.0"
     babel-plugin-transform-react-jsx "^6.8.0"
-    babel-preset-es2015 "^6.18.0"
-    babel-preset-es2016 "^6.16.0"
-    babel-preset-es2017 "^6.16.0"
+    babel-preset-latest "^6.16.0"
 
-tweed-peek@^0.2.0:
-  version "0.2.0"
-  resolved "https://registry.yarnpkg.com/tweed-peek/-/tweed-peek-0.2.0.tgz#ab1d7a7127980ebcdeba01887abd34ec1082bd6c"
+tweed-peek@^0.3.0:
+  version "0.3.0"
+  resolved "https://registry.yarnpkg.com/tweed-peek/-/tweed-peek-0.3.0.tgz#6cd58e69e8a4618103eb7f23a49352087e5724a8"
   dependencies:
     babel-core "^6.21.0"
     babel-standalone "^6.21.1"
-    tweed "^0.2.2"
-    tweed-babel-config "^0.2.0"
-    tweed-typescript-config "^0.2.0"
+    tweed "^0.3.0"
+    tweed-babel-config "^0.3.0"
+    tweed-typescript-config "^0.3.0"
     typescript "^2.1.4"
 
-tweed-router@^0.2.1:
-  version "0.2.1"
-  resolved "https://registry.yarnpkg.com/tweed-router/-/tweed-router-0.2.1.tgz#6e00997f4ec51f611c103d297e58315f4b14e8df"
+tweed-router@^0.3.0:
+  version "0.3.0"
+  resolved "https://registry.yarnpkg.com/tweed-router/-/tweed-router-0.3.0.tgz#d02f56971c1d255a1684ab72a6c1cbd4d82018a4"
   dependencies:
-    tweed "^0.2.1"
+    tweed "^0.3.0"
 
-tweed-typescript-config@^0.2.0:
-  version "0.2.0"
-  resolved "https://registry.yarnpkg.com/tweed-typescript-config/-/tweed-typescript-config-0.2.0.tgz#b57631b0104b99b608f30e8a8dc6c13fe1d00630"
+tweed-typescript-config@^0.3.0:
+  version "0.3.0"
+  resolved "https://registry.yarnpkg.com/tweed-typescript-config/-/tweed-typescript-config-0.3.0.tgz#9401afb4865d91a03e897ee9f8652851df991bdc"
 
-tweed@^0.2.1, tweed@^0.2.2:
-  version "0.2.2"
-  resolved "https://registry.yarnpkg.com/tweed/-/tweed-0.2.2.tgz#0edeac0f55633a4e52c89794ed13165174040ca0"
+tweed@^0.3.0, tweed@^0.3.1:
+  version "0.3.1"
+  resolved "https://registry.yarnpkg.com/tweed/-/tweed-0.3.1.tgz#40637333cf2a265ab4a794ed69fabce0ce0c9ab9"
   dependencies:
     snabbdom "^0.5.4"
     snabbdom-jsx "^0.3.1"

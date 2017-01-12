@@ -52,8 +52,8 @@ export default class Documentation {
     <div id='app'></div>
 
     <script type='application/javascript+tweed'>
-      import { Engine, Node } from 'tweed'
-      import DOMRenderer from 'tweed/render/dom'
+      import { Node } from 'tweed'
+      import render from 'tweed/render/dom'
 
       class Hello {
         render () {
@@ -61,8 +61,7 @@ export default class Documentation {
         }
       }
 
-      new Engine(new DOMRenderer(app))
-        .render(new Hello())
+      render(new Hello(), app)
     </script>
   </body>
 </html>
