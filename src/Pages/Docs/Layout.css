@@ -109,6 +109,7 @@
 
   .main {
     flex: 1 1 auto;
+    max-width: calc(100% - 20em)
   }
 
   .menuSticky {
@@ -121,6 +122,10 @@
   .filler {
     margin-right: 2em;
     flex: 0 0 18em;
+  }
+
+  .main {
+    max-width: calc(100% - 40em)
   }
 
   .wrapper {
