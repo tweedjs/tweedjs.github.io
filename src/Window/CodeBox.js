@@ -57,7 +57,7 @@ export default class CodeBox {
       const form = document.createElement('form')
       form.method = 'POST'
       form.target = '_blank'
-      form.action = 'http://jsfiddle.net/api/post/library/pure/'
+      form.action = 'https://jsfiddle.net/api/post/library/pure/'
 
       const htmlField = document.createElement('input')
       htmlField.name = 'html'
