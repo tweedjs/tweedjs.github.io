@@ -66,6 +66,10 @@
   color: #0062FF;
 }
 
+.article :global(.token.annotation) {
+  color: #0062FF;
+}
+
 .article :global(.token.punctuation) {
   color: #999;
 }
