@@ -125,3 +125,19 @@
 .article :global(.token.attr-value > .punctuation:not(:first-child)) {
   color: #5BAB22;
 }
+
+.article :global(.lang-shell) {
+  margin-left: 1.2em;
+}
+
+.article :global(.shell-prompt) {
+  width: 0;
+  position: relative;
+}
+
+.article :global(.shell-prompt):before {
+  content: '$';
+  position: absolute;
+  color: #CCC;
+  left: -1.2em;
+}
