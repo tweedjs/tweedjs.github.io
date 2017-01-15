@@ -53,16 +53,19 @@ export default class Layout {
 
   _sectionMenu ({ slug, name, subsections }) {
     const url = `/docs/${slug}`
-    const classes = this._router.currentPath.indexOf(url) === 0
+    const isActive = this._router.currentPath.indexOf(url) === 0
+    const classes = isActive
       ? style.menuItemSectionActive
       : style.menuItemSection
 
     return (
       <li className={classes}>
         {this._router.link(url, name)}
-        <ul className={style.subMenu}>
-          {subsections.map(this._subsectionItem.bind(this, slug))}
-        </ul>
+        {isActive ? (
+          <ul className={style.subMenu}>
+            {subsections.map(this._subsectionItem.bind(this, slug))}
+          </ul>
+        ) : null}
       </li>
     )
   }

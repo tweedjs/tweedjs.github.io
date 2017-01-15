@@ -3577,9 +3577,17 @@ tweed-typescript-config@^0.3.0:
   version "0.3.0"
   resolved "https://registry.yarnpkg.com/tweed-typescript-config/-/tweed-typescript-config-0.3.0.tgz#9401afb4865d91a03e897ee9f8652851df991bdc"
 
-tweed@^0.3.0, tweed@^0.3.1:
+tweed@^0.3.0:
   version "0.3.1"
   resolved "https://registry.yarnpkg.com/tweed/-/tweed-0.3.1.tgz#40637333cf2a265ab4a794ed69fabce0ce0c9ab9"
+  dependencies:
+    snabbdom "^0.5.4"
+    snabbdom-jsx "^0.3.1"
+    snabbdom-to-html "^3.0.1"
+
+tweed@^0.3.2:
+  version "0.3.2"
+  resolved "https://registry.yarnpkg.com/tweed/-/tweed-0.3.2.tgz#95ff2e9f9ddd38068dd73bf0a5290f9980f348c2"
   dependencies:
     snabbdom "^0.5.4"
     snabbdom-jsx "^0.3.1"
