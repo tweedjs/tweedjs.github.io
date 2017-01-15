@@ -2,7 +2,7 @@
   "dependencies": {
     "babel-polyfill": "^6.20.0",
     "tweed": "^0.3.1",
-    "tweed-router": "^0.3.9",
+    "tweed-router": "^0.3.10",
     "whatwg-fetch": "^2.0.1"
   },
   "devDependencies": {

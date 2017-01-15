@@ -43,8 +43,6 @@ export default class CodeBox {
   }
 
   _fiddleLink (code) {
-    const fiddleLinkElement = document.createElement('a')
-    fiddleLinkElement.href = '/fiddle.js'
     if (!/^import (.*?) from 'tweed'/.test(code)) {
       const [, mainClass] = /^class (\w+)/.exec(code)
       code = [
@@ -55,18 +53,41 @@ export default class CodeBox {
       ].join('\n\n')
     }
 
+    const visitJSFiddle = () => {
+      const form = document.createElement('form')
+      form.method = 'POST'
+      form.target = '_blank'
+      form.action = 'http://jsfiddle.net/api/post/library/pure/'
+
+      const htmlField = document.createElement('input')
+      htmlField.name = 'html'
+      htmlField.value = "<div id='app'></div>"
+
+      const jsField = document.createElement('textarea')
+      jsField.name = 'js'
+      jsField.value = code
+
+      const panelField = document.createElement('input')
+      panelField.name = 'panel_js'
+      panelField.value = '3'
+
+      const fiddleLinkElement = document.createElement('a')
+      fiddleLinkElement.href = '/fiddle.js'
+
+      const resourcesField = document.createElement('input')
+      resourcesField.name = 'resources'
+      resourcesField.value = fiddleLinkElement.href
+
+      form.appendChild(htmlField)
+      form.appendChild(jsField)
+      form.appendChild(panelField)
+      form.appendChild(resourcesField)
+
+      form.submit()
+    }
+
     return (
-      <form
-        method='POST'
-        target='_blank'
-        action='http://jsfiddle.net/api/post/library/pure/'
-      >
-        <input type='hidden' name='html' value="<div id='app'></div>" />
-        <input type='hidden' name='js' value={code} />
-        <input type='hidden' name='panel_js' value='3' />
-        <input type='hidden' name='resources' value={fiddleLinkElement.href} />
-        <input type='submit' value='JSFiddle' className={style.tab} />
-      </form>
+      <button className={style.tab} on-click={visitJSFiddle}>JSFiddle</button>
     )
   }
 }

@@ -3567,9 +3567,9 @@ tweed-peek@^0.3.0:
     tweed-typescript-config "^0.3.0"
     typescript "^2.1.4"
 
-tweed-router@^0.3.9:
-  version "0.3.9"
-  resolved "https://registry.yarnpkg.com/tweed-router/-/tweed-router-0.3.9.tgz#fe67773909f3b4a0d589685ee077c06efb4516a1"
+tweed-router@^0.3.10:
+  version "0.3.10"
+  resolved "https://registry.yarnpkg.com/tweed-router/-/tweed-router-0.3.10.tgz#3cf35945922b25f25e9d3e953b0bd3c0e3e14e59"
   dependencies:
     tweed "^0.3.0"
 

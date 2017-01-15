@@ -32,8 +32,11 @@ export default class Root {
   }
 
   render () {
+    const className = this._router.isLoading
+      ? style.mainLoading
+      : style.main
     return (
-      <div className={style.main}>
+      <div className={className}>
         {this._header}
         {this._router}
       </div>
