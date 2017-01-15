@@ -32,6 +32,13 @@
   color: #555;
 }
 
+.article hr {
+  border: 0;
+  background: #EEE;
+  height: 3px;
+  margin: 3em 0;
+}
+
 .article pre {
   background: #F9F9F9;
   overflow-x: auto;
