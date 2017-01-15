@@ -13,9 +13,3 @@
   margin-top: 2em;
   text-align: center;
 }
-
-@media (max-width: 59.9999999em) {
-  .wrapper {
-    display: none;
-  }
-}
