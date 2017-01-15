@@ -3567,25 +3567,17 @@ tweed-peek@^0.3.0:
     tweed-typescript-config "^0.3.0"
     typescript "^2.1.4"
 
-tweed-router@^0.3.10:
-  version "0.3.10"
-  resolved "https://registry.yarnpkg.com/tweed-router/-/tweed-router-0.3.10.tgz#3cf35945922b25f25e9d3e953b0bd3c0e3e14e59"
+tweed-router@^0.3.11:
+  version "0.3.11"
+  resolved "https://registry.yarnpkg.com/tweed-router/-/tweed-router-0.3.11.tgz#123aaeabe94e91bd1e5a37d39e8c0c56b108c8b1"
   dependencies:
-    tweed "^0.3.0"
+    tweed "^0.3.2"
 
 tweed-typescript-config@^0.3.0:
   version "0.3.0"
   resolved "https://registry.yarnpkg.com/tweed-typescript-config/-/tweed-typescript-config-0.3.0.tgz#9401afb4865d91a03e897ee9f8652851df991bdc"
 
-tweed@^0.3.0:
-  version "0.3.1"
-  resolved "https://registry.yarnpkg.com/tweed/-/tweed-0.3.1.tgz#40637333cf2a265ab4a794ed69fabce0ce0c9ab9"
-  dependencies:
-    snabbdom "^0.5.4"
-    snabbdom-jsx "^0.3.1"
-    snabbdom-to-html "^3.0.1"
-
-tweed@^0.3.2:
+tweed@^0.3.0, tweed@^0.3.2:
   version "0.3.2"
   resolved "https://registry.yarnpkg.com/tweed/-/tweed-0.3.2.tgz#95ff2e9f9ddd38068dd73bf0a5290f9980f348c2"
   dependencies:
