@@ -1,0 +1,129 @@
+.header {
+  padding-top: calc(1.5em + 5vw);
+  padding-bottom: calc(0.5em + 1vw);
+  text-align: center;
+}
+
+.wrapper {
+  padding: 0 4vw;
+  margin: 0 auto 5vw;
+  max-width: 65em;
+}
+
+.columns {
+  display: flex;
+  flex-direction: column;
+}
+
+.title {
+  font-weight: 400;
+  font-size: 1.3em;
+  margin-bottom: 0.6em;
+}
+
+.description {
+  margin: 0 auto;
+  max-width: 41em;
+  margin-bottom: 0.2em;
+  line-height: 1.5;
+  color: #555;
+}
+
+.menulike {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.menu {
+  composes: menulike;
+  margin: 1.05em 0;
+}
+
+.menuSticky {
+  composes: menu;
+}
+
+.menu a {
+  text-decoration: none;
+  line-height: 1;
+  display: inline-block;
+  padding: 0.3em 0 0.1em;
+  margin-bottom: 0.3em;
+  color: #000;
+  font-weight: 600;
+}
+
+.subMenu {
+  composes: menulike;
+  margin-left: 1em;
+}
+
+.menuItemSection {
+
+}
+
+.menuItemSectionActive {
+  composes: menuItemSection;
+}
+
+.menuItemSubsection {
+
+}
+
+.menuItemSubsectionActive {
+  composes: menuItemSubsection;
+}
+
+.menuItemSection > a, .menuItemSubsection > a {
+  display: inline-block;
+  border-bottom: 0.14em solid transparent;
+}
+
+.menuItemSectionActive > a, .menuItemSubsectionActive > a {
+  border-bottom-color: #DDD;
+}
+
+@media (min-width: 40em) {
+  .title {
+    font-weight: 300;
+    font-size: 3vw;
+  }
+}
+
+@media (max-width: 59.99999999em) {
+  .aside {
+    align-self: center;
+  }
+}
+
+@media (min-width: 60em) {
+  .columns {
+    flex-direction: row-reverse;
+  }
+
+  .aside {
+    margin-left: 2em;
+    flex: 0 0 18em;
+  }
+
+  .main {
+    flex: 1 1 auto;
+  }
+
+  .menuSticky {
+    position: fixed;
+    top: 50px;
+  }
+}
+
+@media (min-width: 80em) {
+  .filler {
+    margin-right: 2em;
+    flex: 0 0 18em;
+  }
+
+  .wrapper {
+    max-width: 85em;
+  }
+}

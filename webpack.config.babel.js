@@ -1,25 +1,26 @@
 import { resolve } from 'path'
 import { optimize } from 'webpack'
-import ExtractTextPlugin from 'extract-text-webpack-plugin'
 
 export default {
-  entry: './src/main',
+  entry: {
+    main: './src/main',
+    fiddle: './src/fiddle'
+  },
   output: {
     path: resolve(__dirname, 'dist'),
-    filename: 'main.js'
+    filename: '[name].js'
   },
   module: {
     loaders: [{
       loader: 'babel',
       test: /\.js$/,
-      exclude: /\.(?:babel|es5)\.js$|node_modules|Code\/tweed(\/.*)?$/
+      exclude: /\.(?:babel|es5)\.js$|node_modules|Code\/tweed-router(\/.*)|Code\/tweed(\/.*)?$/
     }, {
       test: /\.css$/,
-      loader: ExtractTextPlugin.extract('css-loader?modules=true&localIdentName=[hash:base64:5]')
+      loader: 'style-loader!css-loader?modules=true&localIdentName=[hash:base64:5]'
     }]
   },
   plugins: [
-    new ExtractTextPlugin('style.css'),
     ...(process.env.NODE_ENV === 'production'
       ? [new optimize.UglifyJsPlugin()]
       : [])

@@ -32,6 +32,7 @@
   margin: 0;
   display: flex;
   padding: 0 0.9em;
+  justify-content: center;
 }
 
 .menuItem {

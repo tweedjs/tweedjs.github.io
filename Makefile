@@ -12,11 +12,10 @@ webpack:
 
 .PHONY: copy
 copy:
+	mkdir -p dist && \
 	cp node_modules/tweed/tweed.min.js dist/tweed.js && \
 	cp node_modules/tweed-peek/tweed-peek.min.js dist/peek.js && \
 	cp src/index.html dist && \
-	mkdir -p dist/docs && \
-	cp src/index.html dist/docs && \
 	cp src/Pages/Start/tweed-logo.svg dist
 
 .PHONY: commit

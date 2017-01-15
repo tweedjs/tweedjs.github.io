@@ -1,0 +1,34 @@
+.toolbar {
+  display: flex;
+  list-style: none;
+  padding: 0;
+  background: #F9F9F9;
+  border-top-right-radius: 3px;
+  border-top-left-radius: 3px;
+  padding-bottom: 0.4em;
+  margin-bottom: -1.4em;
+  position: relative;
+}
+
+.tab {
+  appearance: none;
+  font: inherit;
+  background: transparent;
+  border: 0;
+  padding: 0.4rem 0.9rem;
+  font-size: 0.8em;
+  font-weight: 600;
+}
+
+.tab:active {
+  color: inherit;
+}
+
+.tabActive {
+  composes: tab;
+  border-bottom: 2px solid #D8D6D6;
+}
+
+.rightButton {
+  margin-left: auto;
+}

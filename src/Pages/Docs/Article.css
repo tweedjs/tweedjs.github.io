@@ -1,0 +1,111 @@
+.article h1,
+.article h2,
+.article h3,
+.article h4,
+.article h5,
+.article h6 {
+  margin: 2em 0 0.8em;
+}
+
+.article p,
+.article blockquote {
+  margin: 1em 0;
+  max-width: 45em;
+}
+
+.article p {
+  line-height: 1.6;
+}
+
+.article p a {
+  color: #0062FF;
+  text-decoration: none;
+}
+
+.article blockquote {
+  border-left: 3px solid #DDD;
+  padding-left: 1em;
+  color: #555;
+}
+
+.article pre {
+  background: #F9F9F9;
+  overflow-x: auto;
+  border-radius: 3px;
+}
+
+.article code {
+  background: #F9F9F9;
+  border-radius: 3px;
+  display: inline-block;
+  font-family: 'SF Mono', 'Roboto Mono', Menlo, monospace;
+  font-size: 0.9em;
+  line-height: 1.5;
+}
+
+.article p code {
+  padding: 0 0.2em;
+  font-size: 0.95em;
+}
+
+.article pre code {
+  padding: 0.6em 0.9em;
+}
+
+/* Code */
+.article :global(.token) {
+  color: #2D2D2D;
+}
+
+.article :global(.token.keyword) {
+  color: #0062FF;
+}
+
+.article :global(.token.punctuation) {
+  color: #999;
+}
+
+.article :global(.token.boolean) {
+  color: #8F55CA;
+}
+
+.article :global(.token.number) {
+  color: #8F55CA;
+}
+
+.article :global(.token.function) {
+  color: #8F55CA;
+}
+
+.article :global(.token.comment) {
+  color: #999;
+}
+
+.article :global(.token.operator) {
+  color: #4C4C4C;
+}
+
+.article :global(.token.string) {
+  color: #5BAB22;
+}
+
+.article :global(.token.class-name) {
+  color: #FF4A60;
+}
+
+.article :global(.token.tag) {
+  color: #0062FF;
+}
+
+.article :global(.token.attr-name) {
+  color: #8F55CA;
+}
+
+.article :global(.token.attr-value .punctuation:first-child) {
+  color: #4C4C4C;
+}
+
+.article :global(.token.attr-value),
+.article :global(.token.attr-value > .punctuation:not(:first-child)) {
+  color: #5BAB22;
+}

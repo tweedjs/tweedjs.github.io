@@ -1,0 +1,21 @@
+.link {
+  text-decoration: none;
+  color: #000;
+  font-weight: 600;
+  position: relative;
+  padding: 1em 2em;
+  display: inline-block;
+  background: #F9F9F9;
+  border-radius: 3px;
+}
+
+.wrapper {
+  margin-top: 2em;
+  text-align: center;
+}
+
+@media (max-width: 59.9999999em) {
+  .wrapper {
+    display: none;
+  }
+}

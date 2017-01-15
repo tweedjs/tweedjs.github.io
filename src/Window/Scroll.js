@@ -3,6 +3,7 @@ import { mutating } from 'tweed'
 const LIMIT = 100
 
 export default class Scroll {
+  @mutating position = 0
   @mutating isAtTop = true
 
   constructor () {
@@ -10,10 +11,7 @@ export default class Scroll {
   }
 
   _onScroll () {
-    if (this.isAtTop && window.scrollY > LIMIT) {
-      this.isAtTop = false
-    } else if (!this.isAtTop && window.scrollY <= LIMIT) {
-      this.isAtTop = true
-    }
+    this.position = window.scrollY
+    this.isAtTop = window.scrollY <= LIMIT
   }
 }

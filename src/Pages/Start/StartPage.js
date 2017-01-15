@@ -11,7 +11,7 @@ export default class StartPage {
     this._children = children
   }
 
-  static make (scroll) {
+  static load () {
     return new StartPage(
       new Hero(),
       // new ScrollHint(scroll),

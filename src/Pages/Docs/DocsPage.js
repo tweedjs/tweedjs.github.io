@@ -1,37 +1,35 @@
 /** @jsx Node */
 
 import { Node } from 'tweed'
-
+import Layout from './Layout'
 import style from './DocsPage.css'
-import Documentation from './Documentation'
 
 export default class DocsPage {
-  static make () {
-    return new DocsPage(new Documentation())
+  static load (router, manifest) {
+    return new DocsPage(router, manifest, new Layout(router, manifest))
   }
 
-  constructor (documentation) {
-    this._documentation = documentation
+  constructor (router, manifest, layout) {
+    this._router = router
+    this._manifest = manifest
+    this._layout = layout
   }
 
   render () {
-    return (
-      <div>
-        <section>
-          {this._header()}
-          <div className={style.article}>
-            {this._documentation}
-          </div>
-        </section>
-      </div>
-    )
-  }
-
-  _header () {
-    return (
-      <header className={style.header}>
-        <h1 className={style.headerTitle}>Documentation</h1>
-      </header>
+    return this._layout.render(
+      'Documentation',
+      "To make learning about Tweed easy and fun, we've made a few different series. " +
+      'Pick the one that suits your experience!',
+      this._manifest.sections.map(({ name, slug, description, subsections }) => (
+        this._router.link(
+          `/docs/${slug}/${subsections[0].slug}`,
+          <div>
+            <h4 className={style.title}>{name}</h4>
+            <p className={style.description}>{description}</p>
+          </div>,
+          { className: style.link }
+        )
+      ))
     )
   }
 }

@@ -1,18 +1,18 @@
 {
   "dependencies": {
     "babel-polyfill": "^6.20.0",
-    "prismjs": "^1.6.0",
     "tweed": "^0.3.1",
-    "tweed-router": "^0.3.0"
+    "tweed-router": "^0.3.9",
+    "whatwg-fetch": "^2.0.1"
   },
   "devDependencies": {
     "babel-cli": "^6.18.0",
     "babel-eslint": "^7.1.1",
     "babel-loader": "^6.2.10",
+    "babel-plugin-dynamic-import-webpack": "^1.0.1",
     "css-loader": "^0.26.1",
-    "extract-text-webpack-plugin": "^1.0.1",
-    "raw-loader": "^0.5.1",
     "standard": "^8.6.0",
+    "style-loader": "^0.13.1",
     "tweed-babel-config": "^0.3.0",
     "tweed-peek": "^0.3.0",
     "webpack": "^1.14.0",
