@@ -43,10 +43,9 @@ export default class CodeBox {
   }
 
   _fiddleLink (code) {
-    if (!/^import (.*?) from 'tweed'/.test(code)) {
+    if (!/^import render from 'tweed\/render\/dom'/.test(code) && /^class (\w+)/.test(code)) {
       const [, mainClass] = /^class (\w+)/.exec(code)
       code = [
-        "import { Node, mutating } from 'tweed'\n" +
         "import render from 'tweed/render/dom'",
         code,
         `render(new ${mainClass}(), document.querySelector('#app'))`
