@@ -32,13 +32,16 @@ export default class Root {
   }
 
   render () {
-    const className = this._router.isLoading
-      ? style.mainLoading
-      : style.main
+    const areaClass = this._router.isLoading
+      ? style.areaLoading
+      : style.area
+
     return (
-      <div className={className}>
+      <div className={style.main}>
         {this._header}
-        {this._router}
+        <div className={areaClass}>
+          {this._router}
+        </div>
       </div>
     )
   }

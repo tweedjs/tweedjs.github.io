@@ -8,14 +8,16 @@ html, body {
 .main {
   width: 100%;
   min-height: 100%;
-  transition: opacity 300ms;
-  transition-delay: 300ms;
 
   composes: body from './Typography.css'
 }
 
-.mainLoading {
-  composes: main;
+.area {
+  transition: opacity 50ms;
+}
 
+.areaLoading {
   opacity: 0.3;
+  transition-duration: 200ms;
+  transition-delay: 20ms;
 }
