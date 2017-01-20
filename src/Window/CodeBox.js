@@ -48,9 +48,11 @@ export default class CodeBox {
       code = [
         ...(/} from 'tweed'/.test(code) ? [] : ["import { mutating, Node } from 'tweed'"]),
         "import render from 'tweed/render/dom'",
+        '',
         code,
+        '',
         `render(new ${mainClass}(), document.querySelector('#app'))`
-      ].join('\n\n')
+      ].join('\n')
     }
 
     const visitJSFiddle = () => {
