@@ -7,12 +7,16 @@ import LinkMenuItem from './Header/LinkMenuItem'
 import Scroll from './Window/Scroll'
 import BrowserRouter, { HashHistory } from 'tweed-router/browser'
 import routes from './routes'
+import GoogleAnalytics from './Analytics/GoogleAnalytics'
 
 export default class Root {
   static async make () {
     const scroll = new Scroll()
 
-    const router = await BrowserRouter.make(routes, new HashHistory())
+    const router = await BrowserRouter.make(
+      GoogleAnalytics.wrapRoutes(routes),
+      new HashHistory()
+    )
 
     return new Root(
       new Header(
