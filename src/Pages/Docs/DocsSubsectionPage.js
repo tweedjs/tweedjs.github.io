@@ -17,6 +17,8 @@ export default class DocsSubsectionPage {
   }
 
   constructor (box, router, section, subsection, layout) {
+    this.title = `${subsection.headers.title} ‹ ${section.name} ‹ Docs ‹ Tweed`
+
     this._box = box
     this._router = router
     this._section = section

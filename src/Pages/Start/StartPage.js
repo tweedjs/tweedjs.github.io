@@ -7,6 +7,8 @@ import Hero from './Hero'
 // import CodeExample from './CodeExample'
 
 export default class StartPage {
+  title = 'Tweed – An OO JS UI Library'
+
   constructor (...children) {
     this._children = children
   }

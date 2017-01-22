@@ -5,6 +5,8 @@ import Layout from './Layout'
 import style from './DocsPage.css'
 
 export default class DocsPage {
+  title = 'Docs ‹ Tweed'
+
   static load (router, manifest) {
     return new DocsPage(router, manifest, new Layout(router, manifest))
   }
