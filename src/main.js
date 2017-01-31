@@ -1,4 +1,3 @@
-import 'babel-polyfill'
 import 'whatwg-fetch'
 
 import render from 'tweed/render/dom'
