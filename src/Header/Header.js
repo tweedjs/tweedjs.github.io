@@ -4,9 +4,8 @@ import { Node } from 'tweed'
 import style from './Header.css'
 
 export default class Header {
-  constructor (scroll, router, ...items) {
+  constructor (scroll, ...items) {
     this._scroll = scroll
-    this._router = router
     this._items = items
   }
 
@@ -16,17 +15,12 @@ export default class Header {
       : style.stickyHeader
 
     return (
-      <header className={className}>
+      <header class={className}>
         <nav role='navigation'>
-          <ul className={style.menu}>
-            {this._items.map(({ href, title, props }) => (
-              <li>
-                {this._router.link(
-                  href, title, Object.assign({},
-                    props,
-                    { className: style.menuItem }
-                  )
-                )}
+          <ul class={style.menu}>
+            {this._items.map((item) => (
+              <li class={style.menuItem}>
+                {item}
               </li>
             ))}
           </ul>

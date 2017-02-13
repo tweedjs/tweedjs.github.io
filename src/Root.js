@@ -4,10 +4,13 @@ import { Node } from 'tweed'
 import style from './Root.css'
 import Header from './Header/Header'
 import LinkMenuItem from './Header/LinkMenuItem'
+import GitHubStarsMenuItem from './Header/GitHubStarsMenuItem'
 import Scroll from './Window/Scroll'
 import BrowserRouter, { HashHistory } from 'tweed-router/browser'
 import routes from './routes'
 import GoogleAnalytics from './Analytics/GoogleAnalytics'
+import Cache from './Cache/Cache'
+import LocalStorageCacheDriver from './Cache/LocalStorageCacheDriver'
 
 export default class Root {
   static async make () {
@@ -18,13 +21,18 @@ export default class Root {
       new HashHistory()
     )
 
+    const cache = new Cache(new LocalStorageCacheDriver())
+
     return new Root(
       new Header(
         scroll,
-        router,
-        new LinkMenuItem('Home', '/'),
-        new LinkMenuItem('Docs', '/docs'),
-        new LinkMenuItem('GitHub', 'https://github.com/tweedjs/tweed', { target: '_blank' })
+        new LinkMenuItem(router, 'Home', '/'),
+        new LinkMenuItem(router, 'Docs', '/docs'),
+        new GitHubStarsMenuItem(
+          cache,
+          'tweedjs/tweed',
+          new LinkMenuItem(router, 'GitHub', 'https://github.com/tweedjs/tweed', { target: '_blank' })
+        )
       ),
       router
     )
