@@ -10,10 +10,15 @@ export default class GoogleAnalytics {
     const wrapped = {}
 
     for (const route in routes) {
-      wrapped[route] = (...args) => {
-        analytics.pageView(window.location.hash.slice(1))
+      wrapped[route] = async function (...args) {
+        const response = await routes[route](...args)
 
-        return routes[route](...args)
+        setTimeout(() =>
+          analytics.pageView(window.location.hash.slice(1)),
+          300
+        )
+
+        return response
       }
     }
 
