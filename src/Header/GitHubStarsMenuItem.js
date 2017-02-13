@@ -54,7 +54,7 @@ export default class GitHubStarsMenuItem {
       this._menuItem.render(),
       <a
         class={className}
-        href={`https://github.com/${this._repositiory}`}
+        href={`https://github.com/${this._repository}`}
         target='_blank'
       >
         {this.stars} ★
