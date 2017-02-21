@@ -6,7 +6,7 @@ import style from './CodeBox.css'
 export default class CodeBox {
   @mutating selectedTab = 'JavaScript'
 
-  render (tabs) {
+  render (tabs, fiddleButton = false) {
     const languages = Object.keys(tabs)
       .map((name) => [name, tabs[name]])
     const codeElement = document.createElement('code')
@@ -31,9 +31,11 @@ export default class CodeBox {
               </li>
             )
           })}
-          <li className={style.rightButton}>
-            {this._fiddleLink(code)}
-          </li>
+          {fiddleButton ? (
+            <li className={style.rightButton}>
+              {this._fiddleLink(code)}
+            </li>
+          ) : null}
         </ul>
         {languages
           .filter(([name]) => name === this.selectedTab)
@@ -62,14 +64,17 @@ export default class CodeBox {
       form.action = 'https://jsfiddle.net/api/post/library/pure/'
 
       const htmlField = document.createElement('input')
+      htmlField.type = 'hidden'
       htmlField.name = 'html'
       htmlField.value = "<div id='app'></div>"
 
-      const jsField = document.createElement('textarea')
+      const jsField = document.createElement('input')
+      jsField.type = 'hidden'
       jsField.name = 'js'
       jsField.value = code
 
       const panelField = document.createElement('input')
+      panelField.type = 'hidden'
       panelField.name = 'panel_js'
       panelField.value = '3'
 
@@ -77,6 +82,7 @@ export default class CodeBox {
       fiddleLinkElement.href = '/fiddle.js'
 
       const resourcesField = document.createElement('input')
+      resourcesField.type = 'hidden'
       resourcesField.name = 'resources'
       resourcesField.value = fiddleLinkElement.href
 
@@ -84,6 +90,7 @@ export default class CodeBox {
       form.appendChild(jsField)
       form.appendChild(panelField)
       form.appendChild(resourcesField)
+      document.body.appendChild(form)
 
       form.submit()
     }

@@ -68,10 +68,10 @@ export default class DocsSubsectionPage {
       }, [])
   }
 
-  _example ({ javascript, typescript }) {
+  _example ({ javascript, typescript, fiddle }) {
     return this._box.render({
       'JavaScript': javascript,
       'TypeScript': typescript
-    })
+    }, fiddle)
   }
 }
