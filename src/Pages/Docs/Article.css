@@ -50,7 +50,7 @@
   background: #F9F9F9;
   border-radius: 3px;
   display: inline-block;
-  font-family: 'SF Mono', 'Roboto Mono', Menlo, monospace;
+  font-family: 'SF Mono', 'SFMono-Regular', 'Roboto Mono', Consolas, 'Liberation Mono', Menlo, Courier, monospace;
   font-size: 0.9em;
   line-height: 1.5;
 }
