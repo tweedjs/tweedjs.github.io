@@ -6,15 +6,15 @@ import style from './Hero.css'
 export default class Hero {
   render () {
     return (
-      <div className={style.wrapper}>
-        <h1 className={style.heading}>
+      <div>
+        <h1 class={style.heading}>
           <img
             src='/tweed-logo.svg'
             alt='Tweed'
-            className={style.logo}
+            class={style.logo}
           />
         </h1>
-        <h2 className={style.heading}>An Object Oriented JavaScript UI Library</h2>
+        <h2 class={style.heading}>An Object Oriented JavaScript UI Library</h2>
       </div>
     )
   }

@@ -2,9 +2,8 @@
 
 import { Node } from 'tweed'
 import Hero from './Hero'
-// import ScrollHint from './ScrollHint'
-// import Examples from './Examples'
-// import CodeExample from './CodeExample'
+import Demo from './Demo'
+import style from './StartPage.css'
 
 export default class StartPage {
   title = 'Tweed – An OO JS UI Library'
@@ -16,17 +15,18 @@ export default class StartPage {
   static load () {
     return new StartPage(
       new Hero(),
-      // new ScrollHint(scroll),
-      // new Examples(
-      //   new CodeExample()
-      // )
+      new Demo()
     )
   }
 
   render () {
     return (
-      <div>
-        {this._children.map((c) => c.render())}
+      <div class={style.wrapper}>
+        <div>
+          {this._children.map((c) =>
+            <div class={style.child}>{c.render()}</div>
+          )}
+        </div>
       </div>
     )
   }

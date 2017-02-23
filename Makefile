@@ -1,4 +1,5 @@
-DATE=$(shell date +"%Y-%m-%d %H:%M:%S")
+DATE = $(shell date +"%Y-%m-%d %H:%M:%S")
+PORT ?= 8080
 
 .PHONY: build
 build: webpack copy
@@ -33,4 +34,5 @@ webpack-dev-server:
 	webpack-dev-server \
 		--content-base dist/ \
 		--inline \
-		--hot
+		--hot \
+		--port $(PORT)
