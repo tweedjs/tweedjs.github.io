@@ -1,11 +1,12 @@
-.wrapper {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-  height: 100vh;
+@media (min-height: 800px) {
+  .wrapper {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    height: 100vh;
+  }
 }
 
 .child {
-  margin: calc(2em + 5vw)
+  margin: calc(2em + 5vw) 0
 }

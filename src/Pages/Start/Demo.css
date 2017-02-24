@@ -1,0 +1,35 @@
+.wrapper {
+  composes: article from '../Docs/Article.css';
+  width: 100%;
+  max-width: 800px;
+  margin: auto;
+}
+
+.rightChild {
+  /* border: 1px solid #EEE; */
+  background: #F9F9F9;
+  padding: 1em;
+  box-sizing: border-box;
+}
+
+.rightChild p {
+  margin-bottom: 0;
+}
+
+@media (min-width: 800px) {
+  .wrapper {
+    display: flex;
+  }
+
+  .leftChild {
+    flex: 1 1 70%;
+  }
+
+  .rightChild {
+    flex: 1 1 30%;
+    margin: 1em;
+    margin-right: 0;
+    margin-bottom: 0.8em;
+    padding-top: 2.5em;
+  }
+}

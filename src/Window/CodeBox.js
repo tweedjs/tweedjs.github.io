@@ -61,7 +61,7 @@ export default class CodeBox {
       const form = document.createElement('form')
       form.method = 'POST'
       form.target = '_blank'
-      form.action = 'https://jsfiddle.net/api/post/library/pure/'
+      form.action = `${window.location.protocol}//jsfiddle.net/api/post/library/pure/`
 
       const htmlField = document.createElement('input')
       htmlField.type = 'hidden'
