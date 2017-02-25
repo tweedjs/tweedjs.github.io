@@ -1,4 +1,8 @@
-.link {
+.wrapper {
+  text-align: center;
+}
+
+.button {
   text-decoration: none;
   color: #000;
   font-weight: 600;
@@ -8,13 +12,10 @@
   background: #F9F9F9;
   border-radius: 3px;
   transition: background-color 200ms;
+  margin: 0.5em;
+  margin-bottom: calc(2em + 1vw);
 }
 
-.link:hover {
+.button:hover {
   background-color: #EEE;
-}
-
-.wrapper {
-  margin-top: 2em;
-  text-align: center;
 }

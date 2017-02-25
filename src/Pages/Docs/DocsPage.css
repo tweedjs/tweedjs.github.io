@@ -6,6 +6,11 @@
   border-radius: 3px;
   padding: 1.2em 1.4em;
   margin-bottom: 1em;
+  transition: background-color 200ms;
+}
+
+.link:hover {
+  background-color: #EEE;
 }
 
 .title {

@@ -3,6 +3,7 @@
 import { Node } from 'tweed'
 import Hero from './Hero'
 import Demo from './Demo'
+import CTA from './CTA'
 import style from './StartPage.css'
 
 export default class StartPage {
@@ -12,10 +13,11 @@ export default class StartPage {
     this._children = children
   }
 
-  static load () {
+  static load (router) {
     return new StartPage(
       new Hero(),
-      new Demo()
+      new Demo(),
+      new CTA(router)
     )
   }
 
