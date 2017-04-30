@@ -18,6 +18,7 @@ copy:
 	cp node_modules/tweed-peek/tweed-peek.min.js dist/peek.js && \
 	cp src/index.html dist && \
 	cp src/favicons/* dist && \
+	cp src/CNAME dist && \
 	cp src/Pages/Start/tweed-logo.svg dist
 
 .PHONY: commit
