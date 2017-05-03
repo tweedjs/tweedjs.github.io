@@ -16,7 +16,7 @@ export default class DocsRepository {
 
   static async load () {
     return new DocsRepository(
-      await get('https://tweedjs.github.io/docs/manifest.json')
+      await get('/docs/manifest.json')
     )
   }
 
