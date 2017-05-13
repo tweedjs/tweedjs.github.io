@@ -1,6 +1,6 @@
-/** @jsx Node */
+/** @jsx VirtualNode */
 
-import { Node } from 'tweed'
+import { VirtualNode } from 'tweed'
 import Layout from './Layout'
 import style from './Article.css'
 import style2 from './DocsSectionPage.css'
@@ -34,20 +34,20 @@ export default class DocsSubsectionPage {
     const isLast = nextSubsection == null
 
     return this._layout.render(this._subsection.headers.title,
-      <article className={style.article}>
+      <article class={style.article}>
         {this._resolveContent()}
-        <div className={style2.wrapper}>
+        <div class={style2.wrapper}>
           {isLast ? (
             this._router.link(
               '/docs',
               'Back to docs',
-              { className: style2.link }
+              { class: style2.link }
             )
           ) : (
             this._router.link(
               `/docs/${this._section.slug}/${nextSubsection.slug}`,
               'Next: ' + nextSubsection.headers.title,
-              { className: style2.link }
+              { class: style2.link }
             )
           )}
         </div>

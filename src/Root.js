@@ -1,6 +1,6 @@
-/** @jsx Node */
+/** @jsx VirtualNode */
 
-import { Node } from 'tweed'
+import { VirtualNode } from 'tweed'
 import style from './Root.css'
 import Header from './Header/Header'
 import LinkMenuItem from './Header/LinkMenuItem'
@@ -49,9 +49,9 @@ export default class Root {
       : style.area
 
     return (
-      <div className={style.main}>
+      <div class={style.main}>
         {this._header}
-        <div className={areaClass}>
+        <div class={areaClass}>
           {this._router}
         </div>
       </div>

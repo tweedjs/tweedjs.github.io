@@ -1,6 +1,6 @@
-/** @jsx Node */
+/** @jsx VirtualNode */
 
-import { Node } from 'tweed'
+import { VirtualNode } from 'tweed'
 import style from './ScrollHint.css'
 
 export default class ScrollHint {
@@ -14,7 +14,7 @@ export default class ScrollHint {
       : style.hintHidden
 
     return (
-      <span className={className}>
+      <span class={className}>
         Scroll down for examples 👇
       </span>
     )

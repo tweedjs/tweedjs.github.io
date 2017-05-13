@@ -1,6 +1,6 @@
-/** @jsx Node */
+/** @jsx VirtualNode */
 
-import { Node, mutating } from 'tweed'
+import { VirtualNode, mutating } from 'tweed'
 import style from './CodeBox.css'
 
 export default class CodeBox {
@@ -14,8 +14,8 @@ export default class CodeBox {
     let code = codeElement.textContent
 
     return (
-      <div className=''>
-        <ul className={style.toolbar}>
+      <div class=''>
+        <ul class={style.toolbar}>
           {languages.map(([name, code]) => {
             const classes = this.selectedTab === name
               ? style.tabActive
@@ -23,7 +23,7 @@ export default class CodeBox {
             return (
               <li>
                 <button
-                  className={classes}
+                  class={classes}
                   on-click={() => { this.selectedTab = name }}
                 >
                   {name}
@@ -32,7 +32,7 @@ export default class CodeBox {
             )
           })}
           {fiddleButton ? (
-            <li className={style.rightButton}>
+            <li class={style.rightButton}>
               {this._fiddleLink(code)}
             </li>
           ) : null}
@@ -48,7 +48,7 @@ export default class CodeBox {
     if (!/^import render from 'tweed\/render\/dom'/.test(code) && /^class (\w+)/.test(code)) {
       const [, mainClass] = /^class (\w+)/.exec(code)
       code = [
-        ...(/} from 'tweed'/.test(code) ? [] : ["import { mutating, Node } from 'tweed'"]),
+        ...(/} from 'tweed'/.test(code) ? [] : ["import { mutating, VirtualNode } from 'tweed'"]),
         "import render from 'tweed/render/dom'",
         '',
         code,
@@ -96,7 +96,7 @@ export default class CodeBox {
     }
 
     return (
-      <button className={style.tab} on-click={visitJSFiddle}>JSFiddle</button>
+      <button class={style.tab} on-click={visitJSFiddle}>JSFiddle</button>
     )
   }
 }

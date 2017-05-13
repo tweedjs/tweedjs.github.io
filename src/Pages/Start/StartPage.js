@@ -1,6 +1,6 @@
-/** @jsx Node */
+/** @jsx VirtualNode */
 
-import { Node } from 'tweed'
+import { VirtualNode } from 'tweed'
 import Hero from './Hero'
 import Demo from './Demo'
 import CTA from './CTA'

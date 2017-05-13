@@ -1,6 +1,6 @@
-/** @jsx Node */
+/** @jsx VirtualNode */
 
-import { Node } from 'tweed'
+import { VirtualNode } from 'tweed'
 import Layout from './Layout'
 import style from './DocsPage.css'
 
@@ -26,10 +26,10 @@ export default class DocsPage {
         this._router.link(
           `/docs/${slug}/${subsections[0].slug}`,
           <div>
-            <h4 className={style.title}>{name}</h4>
-            <p className={style.description}>{description}</p>
+            <h4 class={style.title}>{name}</h4>
+            <p class={style.description}>{description}</p>
           </div>,
-          { className: style.link }
+          { class: style.link }
         )
       ))
     )

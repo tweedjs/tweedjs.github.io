@@ -1,6 +1,6 @@
-/** @jsx Node */
+/** @jsx VirtualNode */
 
-import { Node } from 'tweed'
+import { VirtualNode } from 'tweed'
 import style from './Layout.css'
 
 export default class Layout {
@@ -19,24 +19,24 @@ export default class Layout {
     }
 
     return (
-      <section className={style.wrapper}>
-        <header className={style.header}>
-          <h2 className={style.title}>{title}</h2>
+      <section class={style.wrapper}>
+        <header class={style.header}>
+          <h2 class={style.title}>{title}</h2>
           {description ? (
-            <p className={style.description}>{description}</p>
+            <p class={style.description}>{description}</p>
           ) : null}
         </header>
-        <div className={style.columns}>
-          <aside hook-update={this._setAside} className={style.aside}>{this._menu()}</aside>
-          <main className={style.main}>{content}</main>
-          <div className={style.filler} />
+        <div class={style.columns}>
+          <aside hook-update={this._setAside} class={style.aside}>{this._menu()}</aside>
+          <main class={style.main}>{content}</main>
+          <div class={style.filler} />
         </div>
       </section>
     )
   }
 
-  _setAside (old, vnode) {
-    this._aside = vnode.elm
+  _setAside ({ element }) {
+    this._aside = element
   }
 
   _menu () {
@@ -45,7 +45,7 @@ export default class Layout {
       : style.menu
 
     return (
-      <ul className={menuClass}>
+      <ul class={menuClass}>
         {this._manifest.sections.map(this._sectionMenu)}
       </ul>
     )
@@ -59,10 +59,10 @@ export default class Layout {
       : style.menuItemSection
 
     return (
-      <li className={classes}>
+      <li class={classes}>
         {this._router.link(url, name)}
         {isActive ? (
-          <ul className={style.subMenu}>
+          <ul class={style.subMenu}>
             {subsections.map(this._subsectionItem.bind(this, slug))}
           </ul>
         ) : null}
@@ -77,7 +77,7 @@ export default class Layout {
       : style.menuItemSubsection
 
     return (
-      <li className={classes}>
+      <li class={classes}>
         {this._router.link(url, title)}
       </li>
     )

@@ -13,7 +13,7 @@ export default class LinkMenuItem {
     return this._router.link(
       this.href, this.title, Object.assign({},
         this.props,
-        { className: style.menuItem }
+        { class: style.menuItem }
       )
     )
   }

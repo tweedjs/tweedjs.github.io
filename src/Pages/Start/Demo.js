@@ -1,6 +1,6 @@
-/** @jsx Node */
+/** @jsx VirtualNode */
 
-import { mutating, Node } from 'tweed'
+import { mutating, VirtualNode } from 'tweed'
 import style from './Demo.css'
 import CodeBox from '../../Window/CodeBox'
 

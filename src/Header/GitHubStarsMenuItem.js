@@ -1,4 +1,4 @@
-import { mutating, Node } from 'tweed'
+import { mutating, VirtualNode } from 'tweed'
 import style from './GitHubStarsMenuItem.css'
 
 export default class GitHubStarsMenuItem {

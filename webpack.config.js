@@ -1,7 +1,6 @@
-import { resolve } from 'path'
-import { optimize } from 'webpack'
+const { resolve } = require('path')
 
-export default {
+module.exports = {
   entry: {
     main: './src/main',
     fiddle: './src/fiddle'
@@ -11,19 +10,14 @@ export default {
     filename: '[name].js'
   },
   module: {
-    loaders: [{
-      loader: 'babel',
+    rules: [{
+      loader: 'babel-loader',
       test: /\.js$/,
-      exclude: /\.(?:babel|es5)\.js$|node_modules|Code\/tweed-router(\/.*)|Code\/tweed(\/.*)?$/
+      exclude: /\.(?:babel|es5)\.js$|node_modules|tweed-router|tweed\b/
     }, {
       test: /\.css$/,
       loader: 'style-loader!css-loader?modules=true&localIdentName=[hash:base64:5]'
     }]
   },
-  plugins: [
-    ...(process.env.NODE_ENV === 'production'
-      ? [new optimize.UglifyJsPlugin()]
-      : [])
-  ],
   devServer: { inline: true }
 }
