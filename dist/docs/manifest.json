@@ -1,0 +1,144 @@
+{
+  "sections": [
+    {
+      "name": "Quick Tour",
+      "slug": "quick-tour",
+      "description": "A simple tour of the library. This section does not document setting up your environment or tooling or anything like that. All examples come with links to JSFiddle.",
+      "subsections": [
+        {
+          "headers": {
+            "title": "Welcome to Tweed"
+          },
+          "slug": "welcome",
+          "url": "/docs/quick-tour/welcome.json"
+        },
+        {
+          "headers": {
+            "title": "JSX and Virtual DOM"
+          },
+          "slug": "jsx-and-vdom",
+          "url": "/docs/quick-tour/jsx-and-vdom.json"
+        },
+        {
+          "headers": {
+            "title": "Hello World"
+          },
+          "slug": "hello-world",
+          "url": "/docs/quick-tour/hello-world.json"
+        },
+        {
+          "headers": {
+            "title": "Mutations"
+          },
+          "slug": "mutations",
+          "url": "/docs/quick-tour/mutations.json"
+        }
+      ]
+    },
+    {
+      "name": "Getting Started",
+      "slug": "getting-started",
+      "description": "A full tutorial on setting up Tweed using the CLI, and the process of developing, building, and deploying applications. WIP.",
+      "subsections": [
+        {
+          "headers": {
+            "title": "Installation"
+          },
+          "slug": "installation",
+          "url": "/docs/getting-started/installation.json"
+        },
+        {
+          "headers": {
+            "title": "Tweed CLI"
+          },
+          "slug": "cli",
+          "url": "/docs/getting-started/cli.json"
+        },
+        {
+          "headers": {
+            "title": "Development Workflow"
+          },
+          "slug": "dev-workflow",
+          "url": "/docs/getting-started/dev-workflow.json"
+        },
+        {
+          "headers": {
+            "title": "Server Side Rendering"
+          },
+          "slug": "ssr",
+          "url": "/docs/getting-started/ssr.json"
+        },
+        {
+          "headers": {
+            "title": "Deployment"
+          },
+          "slug": "deployment",
+          "url": "/docs/getting-started/deployment.json"
+        }
+      ]
+    },
+    {
+      "name": "Patterns",
+      "slug": "patterns",
+      "description": "A compilation of design patterns and architectural approaches to building Tweed applications to keep them clean, decoupled, and testable. WIP.",
+      "subsections": [
+        {
+          "headers": {
+            "title": "Dependency Injection"
+          },
+          "slug": "dependency-injection",
+          "url": "/docs/patterns/dependency-injection.json"
+        }
+      ]
+    },
+    {
+      "name": "Philosophy",
+      "slug": "philosophy",
+      "description": "An in depth discussion of why Tweed exists and what problem it aims to solve. Also, this series discusses some ideas about the architecture of a Tweed app. WIP.",
+      "subsections": [
+        {
+          "headers": {
+            "title": "Object Oriented Design"
+          },
+          "slug": "object-oriented-design",
+          "url": "/docs/philosophy/object-oriented-design.json"
+        },
+        {
+          "headers": {
+            "title": "Functional Reactive Programming"
+          },
+          "slug": "functional-reactive-programming",
+          "url": "/docs/philosophy/functional-reactive-programming.json"
+        }
+      ]
+    },
+    {
+      "name": "Ecosystem",
+      "slug": "ecosystem",
+      "description": "A tour of the official Tweed library ecosystem, including libraries for Routing, Automatic Dependency Injection and State Management. WIP",
+      "subsections": [
+        {
+          "headers": {
+            "title": "Tweed Router"
+          },
+          "slug": "router",
+          "url": "/docs/ecosystem/router.json"
+        },
+        {
+          "headers": {
+            "title": "Tweed Inject"
+          },
+          "slug": "inject",
+          "url": "/docs/ecosystem/inject.json"
+        },
+        {
+          "headers": {
+            "title": "Harris – State Manager"
+          },
+          "slug": "harris",
+          "url": "/docs/ecosystem/harris.json"
+        }
+      ]
+    }
+  ]
+}
