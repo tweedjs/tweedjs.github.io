@@ -48,8 +48,8 @@ export default class CodeBox {
     if (!/^import render from 'tweed\/render\/dom'/.test(code) && /^class (\w+)/.test(code)) {
       const [, mainClass] = /^class (\w+)/.exec(code)
       code = [
-        ...(/} from 'tweed'/.test(code) ? [] : ["import { mutating, VirtualNode } from 'tweed'"]),
-        "import render from 'tweed/render/dom'",
+        ...(/} from 'tweed'/.test(code) ? [] : ["const { mutating, VirtualNode } = require('tweed')"]),
+        "const render = require('tweed/render/dom').default",
         '',
         code,
         '',
