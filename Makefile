@@ -9,7 +9,7 @@ dev: webpack-dev-server
 
 .PHONY: webpack
 webpack:
-	webpack -p
+	webpack
 
 .PHONY: copy
 copy:
@@ -32,7 +32,8 @@ push: commit
 
 .PHONY: webpack-dev-server
 webpack-dev-server:
-	webpack-dev-server \
+	webpack-dev-server  \
+		--host 0.0.0.0 \
 		--content-base dist/ \
 		--inline \
 		--hot \
