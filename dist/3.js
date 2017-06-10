@@ -1,1 +1,335 @@
-webpackJsonp([3],{374:function(e,i,t){"use strict";Object.defineProperty(i,"__esModule",{value:!0}),t.d(i,"default",function(){return m});var n=t(19),a=t.n(n),o=t(20),s=t.n(o),r=t(15),u=t(378),l=t(393),c=t.n(l),m=function(){function e(i,t,n){a()(this,e),this.title="Docs ‹ Tweed",this._router=i,this._manifest=t,this._layout=n}return s()(e,null,[{key:"load",value:function(i,t){return new e(i,t,new u.a(i,t))}}]),s()(e,[{key:"render",value:function(){var e=this;return this._layout.render("Documentation","To make learning about Tweed easy and fun, we've made a few different series. Pick the one that suits your experience!",this._manifest.sections.map(function(i){var n=i.name,a=i.slug,o=i.description,s=i.subsections;return e._router.link("/docs/"+a+"/"+s[0].slug,t.i(r.VirtualNode)("div",null,t.i(r.VirtualNode)("h4",{class:c.a.title},n),t.i(r.VirtualNode)("p",{class:c.a.description},o)),{class:c.a.link})}))}}]),e}()},378:function(e,i,t){"use strict";t.d(i,"a",function(){return c});var n=t(19),a=t.n(n),o=t(20),s=t.n(o),r=t(15),u=t(380),l=t.n(u),c=function(){function e(i,t){a()(this,e),this._router=i,this._manifest=t,this._sectionMenu=this._sectionMenu.bind(this),this._setAside=this._setAside.bind(this)}return s()(e,[{key:"render",value:function(e,i,n){return null==n&&(n=i,i=null),t.i(r.VirtualNode)("section",{class:l.a.wrapper},t.i(r.VirtualNode)("header",{class:l.a.header},t.i(r.VirtualNode)("h2",{class:l.a.title},e),i?t.i(r.VirtualNode)("p",{class:l.a.description},i):null),t.i(r.VirtualNode)("div",{class:l.a.columns},t.i(r.VirtualNode)("aside",{"hook-update":this._setAside,class:l.a.aside},this._menu()),t.i(r.VirtualNode)("main",{class:l.a.main},n),t.i(r.VirtualNode)("div",{class:l.a.filler})))}},{key:"_setAside",value:function(e){var i=e.element;this._aside=i}},{key:"_menu",value:function(){var e=this._aside&&this._aside.getBoundingClientRect().top<50?l.a.menuSticky:l.a.menu;return t.i(r.VirtualNode)("ul",{class:e},this._manifest.sections.map(this._sectionMenu))}},{key:"_sectionMenu",value:function(e){var i=e.slug,n=e.name,a=e.subsections,o="/docs/"+i,s=0===this._router.currentPath.indexOf(o),u=s?l.a.menuItemSectionActive:l.a.menuItemSection;return t.i(r.VirtualNode)("li",{class:u},this._router.link(o,n),s?t.i(r.VirtualNode)("ul",{class:l.a.subMenu},a.map(this._subsectionItem.bind(this,i))):null)}},{key:"_subsectionItem",value:function(e,i){var n=i.slug,a=i.headers.title,o="/docs/"+e+"/"+n,s=this._router.isActive(o)?l.a.menuItemSubsectionActive:l.a.menuItemSubsection;return t.i(r.VirtualNode)("li",{class:s},this._router.link(o,a))}}]),e}()},379:function(e,i,t){i=e.exports=t(52)(),i.push([e.i,".DDb6_{padding-top:calc(1.5em + 5vw);padding-bottom:calc(.5em + 1vw);text-align:center}._1emDc{padding:0 4vw;margin:0 auto 5vw;max-width:65em}._1-k5f{display:flex;flex-direction:column}._3Qobu{font-weight:400;font-size:1.3em;margin-bottom:.6em}.ymNy_{margin:0 auto;max-width:41em;margin-bottom:.2em;line-height:1.5;color:#555}._72WqG{list-style:none;margin:0;padding:0}.uxMEn{margin:1.05em 0}.uxMEn a{text-decoration:none;line-height:1;display:inline-block;padding:.3em 0 .1em;margin-bottom:.3em;color:#000;font-weight:600}.BjTBA{margin-left:1em}._2yyyp>a,._3zkN7>a{display:inline-block;border-bottom:.14em solid transparent}._2ldgy>a,._3cLpj>a{border-bottom-color:#ddd}@media (min-width:40em){._3Qobu{font-weight:300;font-size:3vw}}@media (max-width:59.99999999em){._2p_hO{align-self:center}}@media (min-width:60em){._1-k5f{flex-direction:row-reverse}._2p_hO{margin-left:2em;flex:0 0 18em}._2Ui1D{flex:1 1 auto;max-width:calc(100% - 20em)}._97P8u{position:fixed;top:50px}}@media (min-width:80em){._2UKWQ{margin-right:2em;flex:0 0 18em}._2Ui1D{max-width:calc(100% - 40em)}._1emDc{max-width:85em}}",""]),i.locals={header:"DDb6_",wrapper:"_1emDc",columns:"_1-k5f",title:"_3Qobu",description:"ymNy_",menulike:"_72WqG",menu:"uxMEn _72WqG",menuSticky:"_97P8u uxMEn _72WqG",subMenu:"BjTBA _72WqG",menuItemSection:"_3zkN7",menuItemSectionActive:"_2ldgy _3zkN7",menuItemSubsection:"_2yyyp",menuItemSubsectionActive:"_3cLpj _2yyyp",aside:"_2p_hO",main:"_2Ui1D",filler:"_2UKWQ"}},380:function(e,i,t){var n=t(379);"string"==typeof n&&(n=[[e.i,n,""]]);t(65)(n,{});n.locals&&(e.exports=n.locals)},387:function(e,i,t){i=e.exports=t(52)(),i.push([e.i,"._3K4vB{color:#000;text-decoration:none;background:#f9f9f9;display:block;border-radius:3px;padding:1.2em 1.4em;margin-bottom:1em;transition:background-color .2s}._3K4vB:hover{background-color:#eee}._17BXM{font-weight:300;font-size:1.7em;margin-top:0;margin-bottom:.5rem}._3CqGc{line-height:1.5;margin-top:.5rem;margin-bottom:0}",""]),i.locals={link:"_3K4vB",title:"_17BXM",description:"_3CqGc"}},393:function(e,i,t){var n=t(387);"string"==typeof n&&(n=[[e.i,n,""]]);t(65)(n,{});n.locals&&(e.exports=n.locals)}});
+webpackJsonp([3],{
+
+/***/ 390:
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = undefined;
+
+var _classCallCheck2 = __webpack_require__(25);
+
+var _classCallCheck3 = _interopRequireDefault(_classCallCheck2);
+
+var _createClass2 = __webpack_require__(26);
+
+var _createClass3 = _interopRequireDefault(_createClass2);
+
+var _tweed = __webpack_require__(18);
+
+var _Layout = __webpack_require__(394);
+
+var _Layout2 = _interopRequireDefault(_Layout);
+
+var _DocsPage = __webpack_require__(409);
+
+var _DocsPage2 = _interopRequireDefault(_DocsPage);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+var DocsPage = function () {
+  (0, _createClass3.default)(DocsPage, null, [{
+    key: 'load',
+    value: function load(router, manifest) {
+      return new DocsPage(router, manifest, new _Layout2.default(router, manifest));
+    }
+  }]);
+
+  function DocsPage(router, manifest, layout) {
+    (0, _classCallCheck3.default)(this, DocsPage);
+    this.title = 'Docs ‹ Tweed';
+
+    this._router = router;
+    this._manifest = manifest;
+    this._layout = layout;
+  }
+
+  (0, _createClass3.default)(DocsPage, [{
+    key: 'render',
+    value: function render() {
+      var _this = this;
+
+      return this._layout.render('Documentation', "To make learning about Tweed easy and fun, we've made a few different series. " + 'Pick the one that suits your experience!', this._manifest.sections.map(function (_ref) {
+        var name = _ref.name,
+            slug = _ref.slug,
+            description = _ref.description,
+            subsections = _ref.subsections;
+        return _this._router.link('/docs/' + slug + '/' + subsections[0].slug, (0, _tweed.VirtualNode)(
+          'div',
+          null,
+          (0, _tweed.VirtualNode)(
+            'h4',
+            { 'class': _DocsPage2.default.title },
+            name
+          ),
+          (0, _tweed.VirtualNode)(
+            'p',
+            { 'class': _DocsPage2.default.description },
+            description
+          )
+        ), { class: _DocsPage2.default.link });
+      }));
+    }
+  }]);
+  return DocsPage;
+}(); /** @jsx VirtualNode */
+
+exports.default = DocsPage;
+
+/***/ }),
+
+/***/ 394:
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = undefined;
+
+var _classCallCheck2 = __webpack_require__(25);
+
+var _classCallCheck3 = _interopRequireDefault(_classCallCheck2);
+
+var _createClass2 = __webpack_require__(26);
+
+var _createClass3 = _interopRequireDefault(_createClass2);
+
+var _tweed = __webpack_require__(18);
+
+var _Layout = __webpack_require__(396);
+
+var _Layout2 = _interopRequireDefault(_Layout);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+/** @jsx VirtualNode */
+
+var Layout = function () {
+  function Layout(router, manifest) {
+    (0, _classCallCheck3.default)(this, Layout);
+
+    this._router = router;
+    this._manifest = manifest;
+
+    this._sectionMenu = this._sectionMenu.bind(this);
+    this._setAside = this._setAside.bind(this);
+  }
+
+  (0, _createClass3.default)(Layout, [{
+    key: 'render',
+    value: function render(title, description, content) {
+      if (content == null) {
+        content = description;
+        description = null;
+      }
+
+      return (0, _tweed.VirtualNode)(
+        'section',
+        { 'class': _Layout2.default.wrapper },
+        (0, _tweed.VirtualNode)(
+          'header',
+          { 'class': _Layout2.default.header },
+          (0, _tweed.VirtualNode)(
+            'h2',
+            { 'class': _Layout2.default.title },
+            title
+          ),
+          description ? (0, _tweed.VirtualNode)(
+            'p',
+            { 'class': _Layout2.default.description },
+            description
+          ) : null
+        ),
+        (0, _tweed.VirtualNode)(
+          'div',
+          { 'class': _Layout2.default.columns },
+          (0, _tweed.VirtualNode)(
+            'aside',
+            { 'hook-update': this._setAside, 'class': _Layout2.default.aside },
+            this._menu()
+          ),
+          (0, _tweed.VirtualNode)(
+            'main',
+            { 'class': _Layout2.default.main },
+            content
+          ),
+          (0, _tweed.VirtualNode)('div', { 'class': _Layout2.default.filler })
+        )
+      );
+    }
+  }, {
+    key: '_setAside',
+    value: function _setAside(_ref) {
+      var element = _ref.element;
+
+      this._aside = element;
+    }
+  }, {
+    key: '_menu',
+    value: function _menu() {
+      var menuClass = this._aside && this._aside.getBoundingClientRect().top < 50 ? _Layout2.default.menuSticky : _Layout2.default.menu;
+
+      return (0, _tweed.VirtualNode)(
+        'ul',
+        { 'class': menuClass },
+        this._manifest.sections.map(this._sectionMenu)
+      );
+    }
+  }, {
+    key: '_sectionMenu',
+    value: function _sectionMenu(_ref2) {
+      var slug = _ref2.slug,
+          name = _ref2.name,
+          subsections = _ref2.subsections;
+
+      var url = '/docs/' + slug;
+      var isActive = this._router.currentPath.indexOf(url) === 0;
+      var classes = isActive ? _Layout2.default.menuItemSectionActive : _Layout2.default.menuItemSection;
+
+      return (0, _tweed.VirtualNode)(
+        'li',
+        { 'class': classes },
+        this._router.link(url, name),
+        isActive ? (0, _tweed.VirtualNode)(
+          'ul',
+          { 'class': _Layout2.default.subMenu },
+          subsections.map(this._subsectionItem.bind(this, slug))
+        ) : null
+      );
+    }
+  }, {
+    key: '_subsectionItem',
+    value: function _subsectionItem(slug, _ref3) {
+      var subSlug = _ref3.slug,
+          title = _ref3.headers.title;
+
+      var url = '/docs/' + slug + '/' + subSlug;
+      var classes = this._router.isActive(url) ? _Layout2.default.menuItemSubsectionActive : _Layout2.default.menuItemSubsection;
+
+      return (0, _tweed.VirtualNode)(
+        'li',
+        { 'class': classes },
+        this._router.link(url, title)
+      );
+    }
+  }]);
+  return Layout;
+}();
+
+exports.default = Layout;
+
+/***/ }),
+
+/***/ 395:
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__(54)();
+// imports
+
+
+// module
+exports.push([module.i, ".DDb6_ {\n  padding-top: calc(1.5em + 5vw);\n  padding-bottom: calc(0.5em + 1vw);\n  text-align: center;\n}\n\n._1emDc {\n  padding: 0 4vw;\n  margin: 0 auto 5vw;\n  max-width: 65em;\n}\n\n._1-k5f {\n  display: flex;\n  flex-direction: column;\n}\n\n._3Qobu {\n  font-weight: 400;\n  font-size: 1.3em;\n  margin-bottom: 0.6em;\n}\n\n.ymNy_ {\n  margin: 0 auto;\n  max-width: 41em;\n  margin-bottom: 0.2em;\n  line-height: 1.5;\n  color: #555;\n}\n\n._72WqG {\n  list-style: none;\n  margin: 0;\n  padding: 0;\n}\n\n.uxMEn {\n  margin: 1.05em 0;\n}\n\n._97P8u {\n}\n\n.uxMEn a {\n  text-decoration: none;\n  line-height: 1;\n  display: inline-block;\n  padding: 0.3em 0 0.1em;\n  margin-bottom: 0.3em;\n  color: #000;\n  font-weight: 600;\n}\n\n.BjTBA {\n  margin-left: 1em;\n}\n\n._3zkN7 {\n\n}\n\n._2ldgy {\n}\n\n._2yyyp {\n\n}\n\n._3cLpj {\n}\n\n._3zkN7 > a, ._2yyyp > a {\n  display: inline-block;\n  border-bottom: 0.14em solid transparent;\n}\n\n._2ldgy > a, ._3cLpj > a {\n  border-bottom-color: #DDD;\n}\n\n@media (min-width: 40em) {\n  ._3Qobu {\n    font-weight: 300;\n    font-size: 3vw;\n  }\n}\n\n@media (max-width: 59.99999999em) {\n  ._2p_hO {\n    align-self: center;\n  }\n}\n\n@media (min-width: 60em) {\n  ._1-k5f {\n    flex-direction: row-reverse;\n  }\n\n  ._2p_hO {\n    margin-left: 2em;\n    flex: 0 0 18em;\n  }\n\n  ._2Ui1D {\n    flex: 1 1 auto;\n    max-width: calc(100% - 20em)\n  }\n\n  ._97P8u {\n    position: fixed;\n    top: 50px;\n  }\n}\n\n@media (min-width: 80em) {\n  ._2UKWQ {\n    margin-right: 2em;\n    flex: 0 0 18em;\n  }\n\n  ._2Ui1D {\n    max-width: calc(100% - 40em)\n  }\n\n  ._1emDc {\n    max-width: 85em;\n  }\n}\n", ""]);
+
+// exports
+exports.locals = {
+	"header": "DDb6_",
+	"wrapper": "_1emDc",
+	"columns": "_1-k5f",
+	"title": "_3Qobu",
+	"description": "ymNy_",
+	"menulike": "_72WqG",
+	"menu": "uxMEn _72WqG",
+	"menuSticky": "_97P8u uxMEn _72WqG",
+	"subMenu": "BjTBA _72WqG",
+	"menuItemSection": "_3zkN7",
+	"menuItemSectionActive": "_2ldgy _3zkN7",
+	"menuItemSubsection": "_2yyyp",
+	"menuItemSubsectionActive": "_3cLpj _2yyyp",
+	"aside": "_2p_hO",
+	"main": "_2Ui1D",
+	"filler": "_2UKWQ"
+};
+
+/***/ }),
+
+/***/ 396:
+/***/ (function(module, exports, __webpack_require__) {
+
+// style-loader: Adds some css to the DOM by adding a <style> tag
+
+// load the styles
+var content = __webpack_require__(395);
+if(typeof content === 'string') content = [[module.i, content, '']];
+// add the styles to the DOM
+var update = __webpack_require__(67)(content, {});
+if(content.locals) module.exports = content.locals;
+// Hot Module Replacement
+if(false) {
+	// When the styles change, update the <style> tags
+	if(!content.locals) {
+		module.hot.accept("!!./../../../node_modules/css-loader/index.js?modules=true&localIdentName=[hash:base64:5]!./Layout.css", function() {
+			var newContent = require("!!./../../../node_modules/css-loader/index.js?modules=true&localIdentName=[hash:base64:5]!./Layout.css");
+			if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
+			update(newContent);
+		});
+	}
+	// When the module is disposed, remove the <style> tags
+	module.hot.dispose(function() { update(); });
+}
+
+/***/ }),
+
+/***/ 403:
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__(54)();
+// imports
+
+
+// module
+exports.push([module.i, "._3K4vB {\n  color: #000;\n  text-decoration: none;\n  background: #F9F9F9;\n  display: block;\n  border-radius: 3px;\n  padding: 1.2em 1.4em;\n  margin-bottom: 1em;\n  transition: background-color 200ms;\n}\n\n._3K4vB:hover {\n  background-color: #EEE;\n}\n\n._17BXM {\n  font-weight: 300;\n  font-size: 1.7em;\n  margin-top: 0;\n  margin-bottom: 0.5rem;\n}\n\n._3CqGc {\n  line-height: 1.5;\n  margin-top: 0.5rem;\n  margin-bottom: 0;\n}\n", ""]);
+
+// exports
+exports.locals = {
+	"link": "_3K4vB",
+	"title": "_17BXM",
+	"description": "_3CqGc"
+};
+
+/***/ }),
+
+/***/ 409:
+/***/ (function(module, exports, __webpack_require__) {
+
+// style-loader: Adds some css to the DOM by adding a <style> tag
+
+// load the styles
+var content = __webpack_require__(403);
+if(typeof content === 'string') content = [[module.i, content, '']];
+// add the styles to the DOM
+var update = __webpack_require__(67)(content, {});
+if(content.locals) module.exports = content.locals;
+// Hot Module Replacement
+if(false) {
+	// When the styles change, update the <style> tags
+	if(!content.locals) {
+		module.hot.accept("!!./../../../node_modules/css-loader/index.js?modules=true&localIdentName=[hash:base64:5]!./DocsPage.css", function() {
+			var newContent = require("!!./../../../node_modules/css-loader/index.js?modules=true&localIdentName=[hash:base64:5]!./DocsPage.css");
+			if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
+			update(newContent);
+		});
+	}
+	// When the module is disposed, remove the <style> tags
+	module.hot.dispose(function() { update(); });
+}
+
+/***/ })
+
+});
