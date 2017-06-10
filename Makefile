@@ -9,7 +9,7 @@ dev: webpack-dev-server
 
 .PHONY: webpack
 webpack:
-	webpack
+	webpack -p
 
 .PHONY: copy
 copy:
